@@ -3,7 +3,6 @@
    $productrang = 12;
     $trang = $_GET["trang"];
 ?>
-
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -49,10 +48,10 @@
                     <div class="user-menu">
                         <ul>
                             <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
-                            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                            <li><a href="cart.php"><i class="fa fa-user"></i> My Cart</a></li>
-                            <li><a href="checkout.php"><i class="fa fa-user"></i> Checkout</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> Danh sách sản phẩm</a></li>
+                            <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
+                            <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i>Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,19 +60,19 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Tiền tệ :</span><span class="value">VNĐ </span><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#">VNĐ</a></li>
                                     <li><a href="#">USD</a></li>
-                                    <li><a href="#">INR</a></li>
                                     <li><a href="#">GBP</a></li>
                                 </ul>
                             </li>
 
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Ngôn ngữ :</span><span class="value">Tiếng Việt </span><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#">Tiếng Việt</a></li>
                                     <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
                                     <li><a href="#">German</a></li>
                                 </ul>
                             </li>
@@ -115,14 +114,14 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>
-                        <li class="active"><a href="shop.php">Shop page</a></li>
-                        <li><a href="single-product.php">Single product</a></li>
-                        <li><a href="cart.php">Cart</a></li>
-                        <li><a href="checkout.php">Checkout</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.php">Trang chủ</a></li>
+                        <li class="active"><a href="shop.php">Cửa hàng</a></li>
+                        <li><a href="single-product.php">Chi tiết sản phẩm</a></li>
+                        <li><a href="cart.php">Giỏ hàng</a></li>
+                        <li><a href="checkout.php">Kiểm tra</a></li>
+                        <li><a href="#">Phân loại</a></li>
+                        <li><a href="#">Khác</a></li>
+                        <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </div>  
             </div>
@@ -221,7 +220,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
                         <h2>u<span>Stora</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <p>Xưởng Thượng Tín với việc nằm ở TPHCM là điều hết sức thuận lợi cho khách hàng. Bạn có thể đến trực tiếp tại xưởng để bàn bạc và kiểm tra chất liệu vải, mẫu.Với kinh nghiệm lâu năm trong nghề. Chúng tôi sẽ mang đến cho bạn những chiếc áo khoác quảng cáo có giá tốt nhất.</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -233,26 +232,25 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                        <h2 class="footer-wid-title">Điều hướng người dùng </h2>
                         <ul>
-                            <li><a href="">My account</a></li>
-                            <li><a href="">Order history</a></li>
-                            <li><a href="">Wishlist</a></li>
-                            <li><a href="">Vendor contact</a></li>
-                            <li><a href="">Front page</a></li>
+                            <li><a href="">Tài khoản người dùng</a></li>
+                            <li><a href="">Lịch sử đặt hàng</a></li>
+                            <li><a href="">Danh sách </a></li>
+                            <li><a href="">Liên hệ nhà sản xuất</a></li>
+                            <li><a href="">Trang chủ</a></li>
                         </ul>                        
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categories</h2>
+                        <h2 class="footer-wid-title">Phân loại</h2>
                         <ul>
-                            <li><a href="">Mobile Phone</a></li>
-                            <li><a href="">Home accesseries</a></li>
-                            <li><a href="">LED TV</a></li>
-                            <li><a href="">Computer</a></li>
-                            <li><a href="">Gadets</a></li>
+                            <li><a href="">Áo khoác</a></li>
+                            <li><a href="">Áo thun</a></li>
+                            <li><a href="">Giày</a></li>
+                          
                         </ul>                        
                     </div>
                 </div>
@@ -260,10 +258,10 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                        <p>Đăng ký để nhận thông báo mới nhất !!</p>
                         <div class="newsletter-form">
-                            <input type="email" placeholder="Type your email">
-                            <input type="submit" value="Subscribe">
+                            <input type="email" placeholder="Nhập gmail">
+                            <input type="submit" value="Đăng ký">
                         </div>
                     </div>
                 </div>
