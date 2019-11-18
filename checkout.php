@@ -42,11 +42,11 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-                            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                            <li><a href="cart.php"><i class="fa fa-user"></i> My Cart</a></li>
-                            <li><a href="checkout.php"><i class="fa fa-user"></i> Checkout</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                              <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> Danh sách sản phẩm</a></li>
+                            <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
+                            <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i>Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,19 +55,19 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Tiền tệ :</span><span class="value">VNĐ </span><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#">VNĐ</a></li>
                                     <li><a href="#">USD</a></li>
-                                    <li><a href="#">INR</a></li>
                                     <li><a href="#">GBP</a></li>
                                 </ul>
                             </li>
 
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Ngôn ngữ :</span><span class="value">Tiếng Việt </span><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#">Tiếng Việt</a></li>
                                     <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
                                     <li><a href="#">German</a></li>
                                 </ul>
                             </li>
@@ -89,7 +89,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.php">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart.php">Giỏ hàng <span class="cart-amunt">100 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -109,14 +109,14 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="shop.php?trang=1">Shop page</a></li>
-                        <li><a href="single-product.php?id=1">Single product</a></li>
-                        <li><a href="cart.php">Cart</a></li>
-                        <li class="active"><a href="checkout.php">Checkout</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li>
+                         <li><a href="index.php">Trang chủ</a></li>
+                        <li class="active"><a href="shop.php">Cửa hàng</a></li>
+                        <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                        <li><a href="cart.php">Giỏ hàng</a></li>
+                        <li><a href="checkout.php">Kiểm tra</a></li>
+                        <li><a href="#">Phân loại</a></li>
+                        <li><a href="#">Khác</a></li>
+                        <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </div>  
             </div>
@@ -142,39 +142,39 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="single-sidebar">
-                        <h2 class="sidebar-title">Search Products</h2>
+                        <h2 class="sidebar-title">Tìm kiếm sản phẩm</h2>
                         <form action="">
-                            <input type="text" placeholder="Search products...">
-                            <input type="submit" value="Search">
+                            <input type="text" placeholder="Tìm kiếm...">
+                            <input type="submit" value="Tìm">
                         </form>
                     </div>
                     
                     <div class="single-sidebar">
-                        <h2 class="sidebar-title">Products</h2>
+                        <h2 class="sidebar-title">Sản phẩm</h2>
                         <div class="thubmnail-recent">
                             <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
+                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
                             </div>                             
                         </div>
                         <div class="thubmnail-recent">
                             <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
+                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
                             </div>                             
                         </div>
                         <div class="thubmnail-recent">
                             <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
+                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
                             </div>                             
                         </div>
                         <div class="thubmnail-recent">
                             <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
+                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
                             </div>                             
@@ -184,11 +184,11 @@
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Recent Posts</h2>
                         <ul>
-                            <li><a href="single-product.php">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php">Sony Smart TV - 2015</a></li>
+                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
+                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
+                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
+                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
+                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
                         </ul>
                     </div>
                 </div>
@@ -503,25 +503,25 @@
                                             </p>
 
                                             <p id="billing_first_name_field" class="form-row form-row-first validate-required">
-                                                <label class="" for="billing_first_name">First Name <abbr title="required" class="required">*</abbr>
+                                                <label class="" for="billing_first_name">Tên <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="text" value="" placeholder="" id="billing_first_name" name="billing_first_name" class="input-text ">
                                             </p>
 
                                             <p id="billing_last_name_field" class="form-row form-row-last validate-required">
-                                                <label class="" for="billing_last_name">Last Name <abbr title="required" class="required">*</abbr>
+                                                <label class="" for="billing_last_name">Họ <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="text" value="" placeholder="" id="billing_last_name" name="billing_last_name" class="input-text ">
                                             </p>
                                             <div class="clear"></div>
 
                                             <p id="billing_company_field" class="form-row form-row-wide">
-                                                <label class="" for="billing_company">Company Name</label>
+                                                <label class="" for="billing_company">Tên công ty</label>
                                                 <input type="text" value="" placeholder="" id="billing_company" name="billing_company" class="input-text ">
                                             </p>
 
                                             <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
-                                                <label class="" for="billing_address_1">Address <abbr title="required" class="required">*</abbr>
+                                                <label class="" for="billing_address_1">Địa chỉ <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="text" value="" placeholder="Street address" id="billing_address_1" name="billing_address_1" class="input-text ">
                                             </p>
@@ -531,13 +531,13 @@
                                             </p>
 
                                             <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
-                                                <label class="" for="billing_city">Town / City <abbr title="required" class="required">*</abbr>
+                                                <label class="" for="billing_city">Thành phố/Tỉnh <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="text" value="" placeholder="Town / City" id="billing_city" name="billing_city" class="input-text ">
                                             </p>
 
                                             <p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
-                                                <label class="" for="billing_state">County</label>
+                                                <label class="" for="billing_state">Miền</label>
                                                 <input type="text" id="billing_state" name="billing_state" placeholder="State / County" value="" class="input-text ">
                                             </p>
                                             <p id="billing_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
@@ -549,7 +549,7 @@
                                             <div class="clear"></div>
 
                                             <p id="billing_email_field" class="form-row form-row-first validate-required validate-email">
-                                                <label class="" for="billing_email">Email Address <abbr title="required" class="required">*</abbr>
+                                                <label class="" for="billing_email">Địa chỉ email <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="text" value="" placeholder="" id="billing_email" name="billing_email" class="input-text ">
                                             </p>
@@ -563,7 +563,7 @@
 
 
                                             <div class="create-account">
-                                                <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                                                <p>Đăng ký ở bên dưới . Nếu bạn đã có tài khoản hãy đăng nhập ở bên trên</p>
                                                 <p id="account_password_field" class="form-row validate-required">
                                                     <label class="" for="account_password">Account password <abbr title="required" class="required">*</abbr>
                                                     </label>
@@ -835,25 +835,25 @@
                                                 </p>
 
                                                 <p id="shipping_first_name_field" class="form-row form-row-first validate-required">
-                                                    <label class="" for="shipping_first_name">First Name <abbr title="required" class="required">*</abbr>
+                                                    <label class="" for="shipping_first_name">tên <abbr title="required" class="required">*</abbr>
                                                     </label>
                                                     <input type="text" value="" placeholder="" id="shipping_first_name" name="shipping_first_name" class="input-text ">
                                                 </p>
 
                                                 <p id="shipping_last_name_field" class="form-row form-row-last validate-required">
-                                                    <label class="" for="shipping_last_name">Last Name <abbr title="required" class="required">*</abbr>
+                                                    <label class="" for="shipping_last_name">họ <abbr title="required" class="required">*</abbr>
                                                     </label>
                                                     <input type="text" value="" placeholder="" id="shipping_last_name" name="shipping_last_name" class="input-text ">
                                                 </p>
                                                 <div class="clear"></div>
 
                                                 <p id="shipping_company_field" class="form-row form-row-wide">
-                                                    <label class="" for="shipping_company">Company Name</label>
+                                                    <label class="" for="shipping_company"> tên Công ty</label>
                                                     <input type="text" value="" placeholder="" id="shipping_company" name="shipping_company" class="input-text ">
                                                 </p>
 
                                                 <p id="shipping_address_1_field" class="form-row form-row-wide address-field validate-required">
-                                                    <label class="" for="shipping_address_1">Address <abbr title="required" class="required">*</abbr>
+                                                    <label class="" for="shipping_address_1">Địa chỉ <abbr title="required" class="required">*</abbr>
                                                     </label>
                                                     <input type="text" value="" placeholder="Street address" id="shipping_address_1" name="shipping_address_1" class="input-text ">
                                                 </p>
@@ -863,13 +863,13 @@
                                                 </p>
 
                                                 <p id="shipping_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
-                                                    <label class="" for="shipping_city">Town / City <abbr title="required" class="required">*</abbr>
+                                                    <label class="" for="shipping_city">Thành phố/tỉnh <abbr title="required" class="required">*</abbr>
                                                     </label>
                                                     <input type="text" value="" placeholder="Town / City" id="shipping_city" name="shipping_city" class="input-text ">
                                                 </p>
 
                                                 <p id="shipping_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
-                                                    <label class="" for="shipping_state">County</label>
+                                                    <label class="" for="shipping_state">Miền</label>
                                                     <input type="text" id="shipping_state" name="shipping_state" placeholder="State / County" value="" class="input-text ">
                                                 </p>
                                                 <p id="shipping_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
@@ -888,7 +888,7 @@
 
 
                                             <p id="order_comments_field" class="form-row notes">
-                                                <label class="" for="order_comments">Order Notes</label>
+                                                <label class="" for="order_comments">Ghi chú</label>
                                                 <textarea cols="5" rows="2" placeholder="Notes about your order, e.g. special notes for delivery." id="order_comments" class="input-text " name="order_comments"></textarea>
                                             </p>
 
@@ -905,8 +905,8 @@
                                     <table class="shop_table">
                                         <thead>
                                             <tr>
-                                                <th class="product-name">Product</th>
-                                                <th class="product-total">Total</th>
+                                                <th class="product-name">Sản phẩm</th>
+                                                <th class="product-total">Tổng cộng</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1010,37 +1010,36 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                        <h2 class="footer-wid-title">Điều hướng người dùng </h2>
                         <ul>
-                            <li><a href="">My account</a></li>
-                            <li><a href="">Order history</a></li>
-                            <li><a href="">Wishlist</a></li>
-                            <li><a href="">Vendor contact</a></li>
-                            <li><a href="">Front page</a></li>
-                        </ul>                        
+                            <li><a href="">Tài khoản người dùng</a></li>
+                            <li><a href="">Lịch sử đặt hàng</a></li>
+                            <li><a href="">Danh sách </a></li>
+                            <li><a href="">Liên hệ nhà sản xuất</a></li>
+                            <li><a href="">Trang chủ</a></li>
+                        </ul>                             
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categories</h2>
+                         <h2 class="footer-wid-title">Phân loại</h2>
                         <ul>
-                            <li><a href="">Mobile Phone</a></li>
-                            <li><a href="">Home accesseries</a></li>
-                            <li><a href="">LED TV</a></li>
-                            <li><a href="">Computer</a></li>
-                            <li><a href="">Gadets</a></li>
-                        </ul>                        
+                            <li><a href="">Áo khoác</a></li>
+                            <li><a href="">Áo thun</a></li>
+                            <li><a href="">Giày</a></li>
+                          
+                        </ul>                             
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                        <p>Đăng ký để nhận thông báo mới nhất !!</p>
                         <div class="newsletter-form">
-                            <input type="email" placeholder="Type your email">
-                            <input type="submit" value="Subscribe">
+                            <input type="email" placeholder="Nhập gmail">
+                            <input type="submit" value="Đăng ký">
                         </div>
                     </div>
                 </div>
