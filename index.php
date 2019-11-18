@@ -316,14 +316,14 @@
                 <div class="col-md-12">
                     <div class="brand-wrapper">
                         <div class="brand-list">
-                            <img src="img/logo.jpg">
+                           <img src="img/logo.jpg">
                             <img src="img/logo2.jpg">
                             <img src="img/logo3.png">
                             <img src="img/logo6.png">
                             <img src="img/logo2.jpg">
-                            <img src="img/logo6.png">
+                            <img src="img/logo1.jpg">
                             <img src="img/logo.jpg">
-                            <img src="img/logo2.jpg">                              
+                            <img src="img/logo2.jpg">                          
                         </div>
                     </div>
                 </div>
