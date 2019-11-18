@@ -1,8 +1,7 @@
 <?php 
    include("./connect.php");
    $productrang = 12;
-   $trang = $_GET["trang"];
-  
+    $trang = $_GET["trang"];
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +24,7 @@
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+    <base href="/Web/">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     
@@ -165,13 +164,13 @@
                         <div class="product-upper">
                             <img class= "size" src=<?php echo $row['image']?> alt="">
                         </div>
-                        <h2 ><a href=""><?php echo $row['name'] ?></a></h2>
+                        <h2 ><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name'] ?></a></h2>
                         <div class="product-carousel-price">
                             <ins><?php echo $row['price']?></ins> <del><?php echo $row['price2']?></del>
                         </div>  
                         
                         <div class="product-option-shop">
-                            <a data-item="<?php echo json_encode($row) ?>" class="add_to_cart_button" data-quantity="1" data-product_sku="" rel="nofollow" href="single-product.php?link=single-product & id= <?php echo $row['id']?> ">Add to cart</a>
+                            <a data-item="<?php echo json_encode($row) ?>" class="add_to_cart_button" data-quantity="1" data-product_sku="" rel="nofollow" href="# ">Add to cart</a>
                         </div>                       
                     </div>
                 </div>

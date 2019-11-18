@@ -114,7 +114,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Home</a></li>
-                        <li><a href="shop.php">Shop page</a></li>
+                        <li><a href="shop.php?trang=1">Shop page</a></li>
                         <li><a href="single-product.php">Single product</a></li>
                         <li><a href="cart.php">Cart</a></li>
                         <li><a href="checkout.php">Checkout</a></li>
