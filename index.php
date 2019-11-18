@@ -112,15 +112,15 @@
                     </button>
                 </div> 
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.php">Home</a></li>
-                        <li><a href="shop.php?trang=1">Shop page</a></li>
-                        <li><a href="single-product.php?id=1">Single product</a></li>
-                        <li><a href="cart.php">Cart</a></li>
-                        <li><a href="checkout.php">Checkout</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li>
+                <ul class="nav navbar-nav">
+                        <li><a href="index.php">Trang chủ</a></li>
+                        <li class="active"><a href="shop.php">Cửa hàng</a></li>
+                        <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                        <li><a href="cart.php">Giỏ hàng</a></li>
+                        <li><a href="checkout.php">Kiểm tra</a></li>
+                        <li><a href="#">Phân loại</a></li>
+                        <li><a href="#">Khác</a></li>
+                        <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </div>  
             </div>

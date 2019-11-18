@@ -1,7 +1,12 @@
 <?php 
    include("./connect.php");
    $productrang = 12;
-    $trang = $_GET["trang"];
+   if(isset($_GET["trang"])){
+        $trang = $_GET["trang"];
+   }else{
+       $trang = 1;
+   }
+   
 ?>
 <!DOCTYPE html>
 <!--
@@ -115,7 +120,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Trang chủ</a></li>
-                        <li class="active"><a href="shop.php">Cửa hàng</a></li>
+                        <li class="active"><a href="shop.php?trang=1">Cửa hàng</a></li>
                         <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li><a href="checkout.php">Kiểm tra</a></li>
