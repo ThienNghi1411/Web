@@ -48,7 +48,7 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> My Cart</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Checkout</a></li>
@@ -178,7 +178,6 @@
                     }
                      ?>  
                
-
 
             </div>
             
