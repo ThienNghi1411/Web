@@ -1,3 +1,6 @@
+<?php
+include("./connect.php");
+?>
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -26,6 +29,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +37,41 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
+  <script>
+   $(document).ready(function () {
+        
+        $('#ipSearch').keyup(function(e){
+           console.log("heo");
+            if($('#ipSearch').val()==""){
+                $("#h2search").html('');
+            }else{
+                $.ajax({
+                    url:"search.php",
+                    method:"get",
+                    type:"json",
+                    data:{name: $(this).val()},
+                    success:function(data){
+                       
+                         let list = JSON.parse(data);
+                     //   console.log(list);
+                        $('#h2search').html("");
+                         list.forEach(function(value){
+                          $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
+                        
+                      })
+                    }
+
+                });
+            }
+           
+        })
+      
+    
+
+    });
+</script>
   <body>
    
     <div class="header-area">
@@ -141,44 +179,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="single-sidebar">
+                <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
-                        <form action="#">
-                            <input type="text" placeholder="Search products...">
-                            <input type="submit" value="Search">
+                        <form action="shop.php" method="GET">
+                            <input id="ipSearch" name="name" type="text" placeholder="Search products...">
+                            <input type="submit" id = "Ssubmit" value="Search">
+                            
                         </form>
+                        <div id ="h2search"></div>
                     </div>
                     
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Products</h2>
+                        <?php
+                            $sqlSelect = "SELECT * FROM sanpham LIMIT 0,4";
+                            $result = mysqli_query($conn, $sqlSelect);
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
                         <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
+                            <img src=<?php echo $row['image']?> class="recent-thumb" alt="">
+                            <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                             <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$800.00</del>
-                            </div>                             
+                                <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
+                            </div>
                         </div>
-                        <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$800.00</del>
-                            </div>                             
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$800.00</del>
-                            </div>                             
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$800.00</del>
-                            </div>                             
-                        </div>
+                            <?php }
+                            }
+                            ?>
                     </div>
                     
                     <div class="single-sidebar">

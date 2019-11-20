@@ -1,3 +1,6 @@
+<?php
+include("./connect.php");
+?>
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -151,34 +154,22 @@
                     
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Sản phẩm</h2>
+                        <?php
+                            $sqlSelect = "SELECT * FROM sanpham LIMIT 0,4";
+                            $result = mysqli_query($conn, $sqlSelect);
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
                         <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
+                            <img src=<?php echo $row['image']?> class="recent-thumb" alt="">
+                            <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                             <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
+                                <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
+                            </div>
                         </div>
-                        <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php?id=1">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
-                        </div>
+                            <?php }
+                            }
+                            ?>
                     </div>
                     
                     <div class="single-sidebar">

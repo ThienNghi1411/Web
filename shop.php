@@ -58,8 +58,7 @@ if (isset($_GET["name"])) {
         $(".add_to_cart_button").click(addToCartClicked);
 
         function addToCartClicked(event) {
-        
-            event.preventDefault();
+    
             var button = event.target;
             var data = $(this).data("item") // chuỗi json 
             console.log(data);
