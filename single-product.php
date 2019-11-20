@@ -34,7 +34,7 @@ $id = $_GET['id'];
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,6 +42,41 @@ $id = $_GET['id'];
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+<script>
+   $(document).ready(function () {
+        $('#h2search').on("click","p",function(){
+           $name = $(this).text();
+           
+        })
+        $('#ipSearch').keyup(function(e){
+            if($('#ipSearch').val()==""){
+                $("#h2search").html('');
+            }else{
+                $.ajax({
+                    url:"search.php",
+                    method:"get",
+                    type:"json",
+                    data:{name: $(this).val()},
+                    success:function(data){
+                       
+                         let list = JSON.parse(data);
+                     //   console.log(list);
+                        $('#h2search').html("");
+                         list.forEach(function(value){
+                          $('#h2search').append(`<p id ="${value.id}" >${value.name}</p>`);
+                        
+                      })
+                    }
+
+                });
+            }
+           
+        })
+      
+    
+
+    });
+</script>
 
 <body>
     <div class="header-area">
@@ -152,9 +187,11 @@ $id = $_GET['id'];
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
                         <form action="">
-                            <input type="text" placeholder="Search products...">
+                            <input id="ipSearch" type="text" placeholder="Search products...">
                             <input type="submit" value="Search">
+                            
                         </form>
+                        <div id ="h2search"></div>
                     </div>
 
                     <div class="single-sidebar">

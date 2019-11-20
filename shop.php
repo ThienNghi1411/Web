@@ -174,7 +174,7 @@
                         </div>  
                         
                         <div class="product-option-shop">
-                            <a data-item="<?php echo json_encode($row) ?>" class="add_to_cart_button" data-quantity="1" data-product_sku="" rel="nofollow" href="# ">Add to cart</a>
+                            <a data-item="<?php echo json_encode($row)?>" class="add_to_cart_button" data-quantity="1" data-product_sku="" rel="nofollow" href="# ">Add to cart</a>
                         </div>                       
                     </div>
                 </div>
