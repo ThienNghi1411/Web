@@ -287,25 +287,25 @@ include("./connect.php");
                             <div class="cross-sells">
                                 <h2>You may be interested in...</h2>
                                 <ul class="products">
+                                <?php
+                                    $sqlSelect = "SELECT * FROM sanpham LIMIT 0,2";
+                                    $result = mysqli_query($conn, $sqlSelect);
+                                    if (mysqli_num_rows($result) > 0) {
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
                                     <li class="product">
-                                        <a href="single-product.php">
-                                            <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="img/product-2.jpg">
+                                        <a href="single-product.php?id==<?php echo $row['id']?>">
+                                            <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
                                             <h3>Ship Your Idea</h3>
-                                            <span class="price"><span class="amount">£20.00</span></span>
+                                            <span class="price"><span class="amount">$<?php echo $row['price']?></span></span>
                                         </a>
 
                                         <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="22" rel="nofollow" href="single-product.php">Select options</a>
                                     </li>
 
-                                    <li class="product">
-                                        <a href="single-product.php">
-                                            <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="img/product-4.jpg">
-                                            <h3>Ship Your Idea</h3>
-                                            <span class="price"><span class="amount">£20.00</span></span>
-                                        </a>
-
-                                        <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="22" rel="nofollow" href="single-product.php">Select options</a>
-                                    </li>
+                                    <?php }
+                                    }
+                                    ?>
                                 </ul>
                             </div>
 
