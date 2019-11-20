@@ -1,12 +1,17 @@
-<?php 
-   include("./connect.php");
-   $productrang = 12;
-   if(isset($_GET["trang"])){
-        $trang = $_GET["trang"];
-   }else{
-       $trang = 1;
-   }
-   
+<?php
+include("./connect.php");
+$productrang = 12;
+if (isset($_GET["trang"])) {
+    $trang = $_GET["trang"];
+} else {
+    $trang = 1;
+}
+if (isset($_GET["name"])) {
+    $name = $_GET["name"];
+} else {
+    $name = "";
+}
+
 ?>
 <!DOCTYPE html>
 <!--
@@ -15,27 +20,29 @@
 	URL: https://www.freshdesignweb.com/ustora/
 -->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shop Page- Ustora Demo</title>
-    
+
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <base href="/Web/">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,9 +50,33 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-   
+
+</head>
+<script>
+    $('document').ready(function() {
+
+        $(".add_to_cart_button").click(addToCartClicked);
+
+        function addToCartClicked(event) {
+        
+            event.preventDefault();
+            var button = event.target;
+            var data = $(this).data("item") // chuỗi json 
+            console.log(data);
+            var json_obj = JSON.parse(data);
+            var nameItem = json_obj.name;
+            var imgItem = json_obj.image;
+            var priceItem = json_obj.price;
+           
+        }
+
+
+
+    });
+</script>
+
+<body>
+
     <div class="header-area">
         <div class="container">
             <div class="row">
@@ -60,7 +91,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
@@ -87,7 +118,7 @@
             </div>
         </div>
     </div> <!-- End header area -->
-    
+
     <div class="site-branding-area">
         <div class="container">
             <div class="row">
@@ -96,16 +127,16 @@
                         <h1><a href="./"><img src="img/logo.png"></a></h1>
                     </div>
                 </div>
-                
+
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                         <a href="cart.php">Giỏ hàng <span class="cart-amunt">100 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart.php">Giỏ hàng <span class="cart-amunt">100 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div> <!-- End site branding area -->
-    
+
     <div class="mainmenu-area">
         <div class="container">
             <div class="row">
@@ -116,11 +147,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div> 
+                </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Trang chủ</a></li>
-                        <li class ="active"><a href="shop.php?trang=1">Cửa hàng</a></li>
+                        <li class="active"><a href="shop.php?trang=1">Cửa hàng</a></li>
                         <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li><a href="checkout.php">Kiểm tra</a></li>
@@ -128,11 +159,11 @@
                         <li><a href="#">Khác</a></li>
                         <li><a href="#">Liên hệ</a></li>
                     </ul>
-                </div>  
+                </div>
             </div>
         </div>
     </div> <!-- End mainmenu area -->
-    
+
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -144,73 +175,73 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
-            <div class="row">
-                
-                <?php 
-                    $index = ($trang-1)* $productrang;
-                    $sqlSelect = "SELECT * FROM sanpham LIMIT $index ,$productrang" ;
-                    $result = mysqli_query($conn,$sqlSelect);
-                    if (mysqli_num_rows($result) > 0) {
-                        while($row = mysqli_fetch_assoc($result)){
-                           
-                            
-                            //echo $row['description'];
-                        
-                ?>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img class= "size" src=<?php echo $row['image']?> alt="">
+            <div class="row coc">
+
+                <?php
+                $index = ($trang - 1) * $productrang;
+                $sqlSelect = "SELECT * FROM sanpham WHERE name LIKE '%$name%' LIMIT $index ,$productrang";
+                $result = mysqli_query($conn, $sqlSelect);
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+
+
+                        //echo $row['description'];
+
+                        ?>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-shop-product">
+                                <div class="product-upper">
+                                    <img class="size" src=<?php echo $row['image'] ?> alt="">
+                                </div>
+                                <h2><a href="single-product.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></h2>
+                                <div class="product-carousel-price">
+                                    <ins><?php echo $row['price'] ?></ins> <del><?php echo $row['price2'] ?></del>
+                                </div>
+
+                                <div class="product-option-shop">
+                                    <a data-item='<?php echo json_encode($row)?>' class="add_to_cart_button" data-quantity="1" data-product_sku="" rel="nofollow" href="shop.php" >Add to cart</a>
+                                </div>
+                            </div>
                         </div>
-                        <h2 ><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name'] ?></a></h2>
-                        <div class="product-carousel-price">
-                            <ins><?php echo $row['price']?></ins> <del><?php echo $row['price2']?></del>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a data-item="<?php echo json_encode($row)?>" class="add_to_cart_button" data-quantity="1" data-product_sku="" rel="nofollow" href="# ">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-                        <?php }
-                    }
-                     ?>  
-               
+                <?php }
+                }
+                ?>
+
 
             </div>
-            
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-pagination text-center">
                         <nav>
-                          <ul class="pagination">
-                            <li>
-                              <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                              </a>
-                            </li>
-                            <?php
-                            $coc = mysqli_query($conn,"SELECT * FROM sanpham") ;
-                            $tongproduct = mysqli_num_rows($coc);
-                            $sotrang = ceil($tongproduct/$productrang);
-                             for($i = 1 ; $i <= $sotrang ; ++$i ){
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <?php
+                                $coc = mysqli_query($conn, "SELECT * FROM sanpham");
+                                $tongproduct = mysqli_num_rows($coc);
+                                $sotrang = ceil($tongproduct / $productrang);
+                                for ($i = 1; $i <= $sotrang; ++$i) {
 
-                            ?>
-                            <li><a href="shop.php? trang=<?php echo $i?>  "><?php echo $i?></a></li>
-                            <?php } ?>
-                            <li>
-                              <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>                        
+                                    ?>
+                                    <li><a href="shop.php? trang=<?php echo $i ?>  "><?php echo $i ?></a></li>
+                                <?php } ?>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -234,7 +265,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Điều hướng người dùng </h2>
@@ -244,10 +275,10 @@
                             <li><a href="">Danh sách </a></li>
                             <li><a href="">Liên hệ nhà sản xuất</a></li>
                             <li><a href="">Trang chủ</a></li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Phân loại</h2>
@@ -255,11 +286,11 @@
                             <li><a href="">Áo khoác</a></li>
                             <li><a href="">Áo thun</a></li>
                             <li><a href="">Giày</a></li>
-                          
-                        </ul>                        
+
+                        </ul>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title">Newsletter</h2>
@@ -278,10 +309,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                       <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="footer-card-icon">
                         <i class="fa fa-cc-discover"></i>
@@ -293,21 +324,22 @@
             </div>
         </div>
     </div>
-   
+
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    
+
     <!-- Bootstrap JS form CDN -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    
+
     <!-- jQuery sticky menu -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-    
+
     <!-- jQuery easing -->
     <script src="js/jquery.easing.1.3.min.js"></script>
-    
+
     <!-- Main Script -->
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

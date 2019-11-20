@@ -1,6 +1,9 @@
 <?php
 include("./connect.php");
-$id = $_GET['id'];
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+}
+
 
 
 
@@ -35,6 +38,7 @@ $id = $_GET['id'];
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -46,7 +50,8 @@ $id = $_GET['id'];
    $(document).ready(function () {
         $('#h2search').on("click","p",function(){
            $name = $(this).text();
-           
+
+
         })
         $('#ipSearch').keyup(function(e){
             if($('#ipSearch').val()==""){
@@ -63,7 +68,7 @@ $id = $_GET['id'];
                      //   console.log(list);
                         $('#h2search').html("");
                          list.forEach(function(value){
-                          $('#h2search').append(`<p id ="${value.id}" >${value.name}</p>`);
+                          $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
                         
                       })
                     }
@@ -186,9 +191,9 @@ $id = $_GET['id'];
                 <div class="col-md-4">
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
-                        <form action="">
-                            <input id="ipSearch" type="text" placeholder="Search products...">
-                            <input type="submit" value="Search">
+                        <form action="shop.php" method="GET">
+                            <input id="ipSearch" name="name" type="text" placeholder="Search products...">
+                            <input type="submit" id = "Ssubmit" value="Search">
                             
                         </form>
                         <div id ="h2search"></div>
