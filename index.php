@@ -316,7 +316,7 @@
                                 while($row = mysqli_fetch_assoc($result)){
                         ?>
                         <div class="single-wid-product">
-                            <a href="single-product.php?id=1"><img src="<?php echo $row['image']?>" alt="" class="product-thumb"></a>
+                            <a href="single-product.php?id=1"><img src='<?php echo $row['image']?>' alt="" class="product-thumb"></a>
                             <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
