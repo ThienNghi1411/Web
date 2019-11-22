@@ -15,9 +15,9 @@ if (isset($_GET["name"])) {
 ?>
 <!DOCTYPE html>
 <!--
-	ustora by freshdesignweb.com
-	Twitter: https://twitter.com/freshdesignweb
-	URL: https://www.freshdesignweb.com/ustora/
+    ustora by freshdesignweb.com
+    Twitter: https://twitter.com/freshdesignweb
+    URL: https://www.freshdesignweb.com/ustora/
 -->
 <html lang="en">
 
@@ -34,7 +34,7 @@ if (isset($_GET["name"])) {
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <base href="/Web/">
+    <base href="./">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
