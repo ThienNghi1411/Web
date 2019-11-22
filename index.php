@@ -225,7 +225,7 @@
                                 <div class="product-f-image">
                                     <img src=<?php echo $row['image']?> alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a data-item='<?php echo json_encode($row)?>' href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.php?id=<?php echo $row['id']?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>

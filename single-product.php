@@ -208,7 +208,7 @@ if(isset($_GET['id'])){
                                 while ($row = mysqli_fetch_assoc($result)) {
                         ?>
                         <div class="thubmnail-recent">
-                            <img src=<?php echo $row['image']?> class="recent-thumb" alt="">
+                            <img src="<?php echo $row['image']?>" class="recent-thumb" alt="">
                             <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
@@ -269,7 +269,7 @@ if(isset($_GET['id'])){
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <button class="add_to_cart_button" type="submit">Add to cart</button>
+                                        <button data-item='<?php echo json_encode($coc)?>' class="add_to_cart_button" type="submit">Add to cart</button>
                                     </form>
 
                                     <div class="product-inner-category">
@@ -328,7 +328,7 @@ if(isset($_GET['id'])){
                                     <div class="product-f-image">
                                         <img src="<?php echo $row['image']?>" alt="">
                                         <div class="product-hover">
-                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a data-item='<?php echo json_encode($row)?>' href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                             <a href="single-product?id=<?php echo $row['id']?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
