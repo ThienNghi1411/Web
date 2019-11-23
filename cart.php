@@ -21,7 +21,7 @@ include("./connect.php");
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+    <base href="./">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     

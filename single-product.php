@@ -1,6 +1,6 @@
 <?php
 include("./connect.php");
-if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 
@@ -31,6 +31,7 @@ if(isset($_GET['id'])){
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Font Awesome -->
+    <base href="./">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- Custom CSS -->
@@ -38,7 +39,7 @@ if(isset($_GET['id'])){
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,38 +48,48 @@ if(isset($_GET['id'])){
     <![endif]-->
 </head>
 <script>
-   $(document).ready(function () {
-        $('#h2search').on("click","p",function(){
-           $name = $(this).text();
+    $(document).ready(function() {
+        $('#h2search').on("click", "p", function() {
+            $name = $(this).text();
 
 
         })
-        $('#ipSearch').keyup(function(e){
-            if($('#ipSearch').val()==""){
+        $('#ipSearch').keyup(function(e) {
+            if ($('#ipSearch').val() == "") {
                 $("#h2search").html('');
-            }else{
+            } else {
                 $.ajax({
-                    url:"search.php",
-                    method:"get",
-                    type:"json",
-                    data:{name: $(this).val()},
-                    success:function(data){
-                       
-                         let list = JSON.parse(data);
-                     //   console.log(list);
-                        $('#h2search').html("");
-                         list.forEach(function(value){
-                          $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
+                    url: "search.php",
+                    method: "get",
+                    type: "json",
+                    data: {
+                        name: $(this).val()
+                    },
+                    success: function(data) {
                         
-                      })
+                        let list = JSON.parse(data);
+                       
+                       
+                        if (list != "") {
+                            
+                            $('#h2search').html("");
+                            list.forEach(function(value) {
+                                $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
+
+                            })
+                        }else{
+                            $('#h2search').html("");
+                            $('#h2search').append(`  Không tìm thấy `);
+                        }
+
                     }
 
                 });
             }
-           
+
         })
-      
-    
+
+
 
     });
 </script>
@@ -193,30 +204,30 @@ if(isset($_GET['id'])){
                         <h2 class="sidebar-title">Search Products</h2>
                         <form action="shop.php" method="GET">
                             <input id="ipSearch" name="name" type="text" placeholder="Search products...">
-                            <input type="submit" id = "Ssubmit" value="Search">
-                            
+                            <input type="submit" id="Ssubmit" value="Search">
+
                         </form>
-                        <div id ="h2search"></div>
+                        <div id="h2search"></div>
                     </div>
 
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Products</h2>
                         <?php
-                            $sqlSelect = "SELECT * FROM sanpham LIMIT 0,4";
-                            $result = mysqli_query($conn, $sqlSelect);
-                            if (mysqli_num_rows($result) > 0) {
-                                while ($row = mysqli_fetch_assoc($result)) {
+                        $sqlSelect = "SELECT * FROM sanpham LIMIT 0,4";
+                        $result = mysqli_query($conn, $sqlSelect);
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                <div class="thubmnail-recent">
+                                    <img src="<?php echo $row['image'] ?>" class="recent-thumb" alt="">
+                                    <h2><a href="single-product.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></h2>
+                                    <div class="product-sidebar-price">
+                                        <ins>$<?php echo $row['price'] ?></ins> <del>$<?php echo $row['price2'] ?></del>
+                                    </div>
+                                </div>
+                        <?php }
+                        }
                         ?>
-                        <div class="thubmnail-recent">
-                            <img src="<?php echo $row['image']?>" class="recent-thumb" alt="">
-                            <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
-                            </div>
-                        </div>
-                            <?php }
-                            }
-                            ?>
                     </div>
 
                     <div class="single-sidebar">
@@ -269,7 +280,7 @@ if(isset($_GET['id'])){
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <button data-item='<?php echo json_encode($coc)?>' class="add_to_cart_button" type="submit">Add to cart</button>
+                                        <button data-item='<?php echo json_encode($coc) ?>' class="add_to_cart_button" type="submit">Add to cart</button>
                                     </form>
 
                                     <div class="product-inner-category">
@@ -317,32 +328,32 @@ if(isset($_GET['id'])){
                         <div class="related-products-wrapper">
                             <h2 class="related-products-title">Related Products</h2>
                             <div class="related-products-carousel">
-                            <?php
-                            $sqlSelect = "SELECT * FROM sanpham LIMIT 6,7";
-                            $result = mysqli_query($conn, $sqlSelect);
-                            if (mysqli_num_rows($result) > 0) {
-                                while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                            
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="<?php echo $row['image']?>" alt="">
-                                        <div class="product-hover">
-                                            <a data-item='<?php echo json_encode($row)?>' href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="single-product?id=<?php echo $row['id']?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <?php
+                                $sqlSelect = "SELECT * FROM sanpham LIMIT 6,7";
+                                $result = mysqli_query($conn, $sqlSelect);
+                                if (mysqli_num_rows($result) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        ?>
+
+                                        <div class="single-product">
+                                            <div class="product-f-image">
+                                                <img src="<?php echo $row['image'] ?>" alt="">
+                                                <div class="product-hover">
+                                                    <a data-item='<?php echo json_encode($row) ?>' href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                    <a href="single-product?id=<?php echo $row['id'] ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                                </div>
+                                            </div>
+
+                                            <h2><a href=""><?php echo $row['name'] ?></a></h2>
+
+                                            <div class="product-carousel-price">
+                                                <ins>$<?php echo $row['price'] ?></ins> <del>$<?php echo $row['price2'] ?></del>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <h2><a href=""><?php echo $row['name']?></a></h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
-                                    </div>
-                                </div>
-                               
-                            <?php }
-                            }
-                            ?>
+                                <?php }
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
