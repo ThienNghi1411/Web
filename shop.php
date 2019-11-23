@@ -43,6 +43,7 @@ if (isset($_GET["name"])) {
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="2.js"></script
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,27 +53,6 @@ if (isset($_GET["name"])) {
     <![endif]-->
 
 </head>
-<script>
-    $('document').ready(function() {
-
-        $(".add_to_cart_button").click(addToCartClicked);
-
-        function addToCartClicked(event) {
-    
-            var button = event.target;
-            var data = $(this).data("item") // chuỗi json 
-            console.log(data);
-            var json_obj = JSON.parse(data);
-            var nameItem = json_obj.name;
-            var imgItem = json_obj.image;
-            var priceItem = json_obj.price;
-           
-        }
-
-
-
-    });
-</script>
 
 <body>
 

@@ -296,7 +296,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
+                                <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
                             </div>                            
                         </div>
                         <?php   }
@@ -326,7 +326,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
+                                <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
                             </div>                            
                         </div>
                         <?php   }
@@ -355,7 +355,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
+                                <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
                             </div>                            
                         </div>
                         <?php   }
