@@ -24,7 +24,7 @@ function ready()
 		input.addEventListener('change',UpdateQuantity);
 	}
     nameItem.forEach(function(value) {
-        addItemToCart(value.name, value.price, value.image,1);
+        addItemToCart(value.name, value.price, value.image,value.quantity);
 
     })
     
@@ -36,13 +36,7 @@ function addItemToCart(title, price, imageSrc, Quantity)
     var cartRow = document.createElement('TR')
     cartRow.classList.add('cart_item')
     var cartItems = document.getElementById('giohang')
-    var cartItemsname=cartItems.getElementsByClassName('product-name')
-    for (var i = 0; i < cartItemNames.length; i++) {
-        if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
-            return
-        }
-    }
+
     var cartRowContents = `
             <td class="product-remove">
                 <a title="Remove this item" class="remove" href="#">×</a> 
@@ -109,6 +103,7 @@ function UpdateQuantity(event)
 
 function removeCartItem(event,i)
 {
+    event.preventDefault();
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
     nameItem.splice(i,1)
     sessionStorage.setItem('name', JSON.stringify(nameItem))

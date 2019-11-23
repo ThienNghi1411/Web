@@ -47,52 +47,7 @@ if (isset($_GET['id'])) {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<script>
-    $(document).ready(function() {
-        $('#h2search').on("click", "p", function() {
-            $name = $(this).text();
 
-
-        })
-        $('#ipSearch').keyup(function(e) {
-            if ($('#ipSearch').val() == "") {
-                $("#h2search").html('');
-            } else {
-                $.ajax({
-                    url: "search.php",
-                    method: "get",
-                    type: "json",
-                    data: {
-                        name: $(this).val()
-                    },
-                    success: function(data) {
-                        
-                        let list = JSON.parse(data);
-                       
-                       
-                        if (list != "") {
-                            
-                            $('#h2search').html("");
-                            list.forEach(function(value) {
-                                $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
-
-                            })
-                        }else{
-                            $('#h2search').html("");
-                            $('#h2search').append(`  Không tìm thấy `);
-                        }
-
-                    }
-
-                });
-            }
-
-        })
-
-
-
-    });
-</script>
 
 <body>
     <div class="header-area">
@@ -202,9 +157,9 @@ if (isset($_GET['id'])) {
                 <div class="col-md-4">
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
-                        <form action="shop.php" method="GET">
-                            <input id="ipSearch" name="name" type="text" placeholder="Search products...">
-                            <input type="submit" id="Ssubmit" value="Search">
+                        <form action="shop.php" method="GET" autocomplete="off">
+                            <input id="ipSearch" name="name" type="text" placeholder="Tìm kiếm sản phẩm">
+                            <input type="submit" id="Ssubmit" value="Tìm kiếm ">
 
                         </form>
                         <div id="h2search"></div>
@@ -261,11 +216,7 @@ if (isset($_GET['id'])) {
                                         <img src=<?php echo $coc['image'] ?> alt="">
                                     </div>
 
-                                    <div class="product-gallery">
-                                        <img src="img/product-thumb-1.jpg" alt="">
-                                        <img src="img/product-thumb-2.jpg" alt="">
-                                        <img src="img/product-thumb-3.jpg" alt="">
-                                    </div>
+
                                 </div>
                             </div>
 

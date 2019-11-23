@@ -212,3 +212,14 @@ div.coupon input[type="text"] {
   display: flex;
   flex-wrap: wrap;
 }
+#h2search{
+  position: absolute;
+  background: white;
+  top: 103px;
+  box-shadow: 1px 5px 6px 0px;
+  padding: 10px;
+}
+#h2search a {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}

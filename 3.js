@@ -19,12 +19,18 @@ function ready()
     }
 
 }
-var jsondata = [];
+
 function addToCartClicked(event) {
     event.preventDefault();
+    if(sessionStorage.getItem('name')){
+        jsondata =JSON.parse(sessionStorage.getItem('name'));
+   }else{
+        jsondata = [];
+   }
     var button = event.target;
     var data = button.getAttribute("data-item") ;// chuỗi json 
-
+    let quantity_input = Number(document.querySelectorAll(".input-text")[0].value) ;
+    
     var json_obj =JSON.parse(data);
     for (var i = 0 ; i < jsondata.length ; i++)
     {
@@ -34,6 +40,7 @@ function addToCartClicked(event) {
             return;
         }
     }
+    json_obj.quantity = quantity_input;
     jsondata.push(json_obj);
     console.log(jsondata)
     JSON.stringify(jsondata);
@@ -42,4 +49,54 @@ function addToCartClicked(event) {
 }
 
 
+$(document).ready(function() {
+    $("#h2search").hide();
+    $('#h2search').on("click", "p", function() {
+        $name = $(this).text();
+    })
+    $(document).click(function(){
+        let id = $(this).attr("id");
+        if(id !== "ipSearch"  ) {
+            $("#h2search").hide();
+        }
+    })
+    $('#ipSearch').keyup(function(e) {
+        if ($('#ipSearch').val() == "") {
+            $("#h2search").html('');
+            $("#h2search").hide();
+        } else {
+            $("#h2search").show();
+            $.ajax({
+                url: "search.php",
+                method: "get",
+                type: "json",
+                data: {
+                    name: $(this).val()
+                },
+                success: function(data) {
+                    
+                    let list = JSON.parse(data);
+                   
+                   
+                    if (list != "") {
+                        
+                        $('#h2search').html("");
+                        list.forEach(function(value) {
+                            $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
 
+                        })
+                    }else{
+                        $('#h2search').html("");
+                        $('#h2search').append(`  Không tìm thấy `);
+                    }
+
+                }
+
+            });
+        }
+
+    })
+
+
+
+});
