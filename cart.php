@@ -30,7 +30,7 @@ include("./connect.php");
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="1.js"></script
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -236,48 +236,22 @@ include("./connect.php");
                                             <th class="product-subtotal">Total</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="cart_item">
-                                            <td class="product-remove">
-                                                <a title="Remove this item" class="remove" href="#">×</a> 
-                                            </td>
-
-                                            <td class="product-thumbnail">
-                                                <a href="single-product.php"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/product-thumb-2.jpg"></a>
-                                            </td>
-
-                                            <td class="product-name">
-                                                <a href="single-product.php">Ship Your Idea</a> 
-                                            </td>
-
-                                            <td class="product-price">
-                                                <span class="amount">£15.00</span> 
-                                            </td>
-
-                                            <td class="product-quantity">
-                                                <div class="quantity buttons_added">
-                                                    <input type="button" class="minus" value="-">
-                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
-                                                    <input type="button" class="plus" value="+">
-                                                </div>
-                                            </td>
-
-                                            <td class="product-subtotal">
-                                                <span class="amount">£15.00</span> 
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="actions" colspan="6">
-                                                <div class="coupon">
-                                                    <label for="coupon_code">Coupon:</label>
-                                                    <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
-                                                    <input type="submit" value="Apply Coupon" name="apply_coupon" class="button">
-                                                </div>
-                                                <input type="submit" value="Update Cart" name="update_cart" class="button">
-                                                <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
-                                            </td>
-                                        </tr>
+                                    <tbody id="giohang">
+                                        
                                     </tbody>
+                                </table>
+                                <table class="shop_table cart">
+                                <tr>
+                                    <td class="actions" colspan="6">
+                                        <div class="coupon">
+                                            <label for="coupon_code">Coupon:</label>
+                                            <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
+                                            <input type="submit" value="Apply Coupon" name="apply_coupon" class="button">
+                                        </div>
+                                        <input type="submit" value="Update Cart" name="update_cart" class="button">
+                                        <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
+                                    </td>
+                                </tr>
                                 </table>
                             </form>
 
@@ -317,7 +291,7 @@ include("./connect.php");
                                     <tbody>
                                         <tr class="cart-subtotal">
                                             <th>Cart Subtotal</th>
-                                            <td><span class="amount">£15.00</span></td>
+                                            <td><span class="Subtotal-amount">£15.00</span></td>
                                         </tr>
 
                                         <tr class="shipping">
@@ -327,7 +301,7 @@ include("./connect.php");
 
                                         <tr class="order-total">
                                             <th>Order Total</th>
-                                            <td><strong><span class="amount">£15.00</span></strong> </td>
+                                            <td><strong><span class="Order-total-amount">£15.00</span></strong> </td>
                                         </tr>
                                     </tbody>
                                 </table>
