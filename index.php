@@ -527,7 +527,7 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
+                        <h2 class="footer-wid-title">Người mới</h2>
                         <p>Đăng ký để nhận thông báo mới nhất !!</p>
                         <div class="newsletter-form">
                             <form action="#">
