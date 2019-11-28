@@ -96,7 +96,7 @@ $(document).ready(function() {
 
     })
     
-
+    // đánh giá sao
     $(".rating-wrap-post .fa.fa-star").hover(function () {
             let a = $(this).attr("data-item");
             $(".fa.fa-star").each(function() {  

@@ -42,7 +42,7 @@ if (isset($_GET["name"])) {
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
     <script src="2.js"></script
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
