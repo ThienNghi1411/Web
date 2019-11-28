@@ -103,7 +103,7 @@ if (isset($_GET["name"])) {
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="img/logo.png"></a></h1>
+                        <h1><a href="./"><img src="img/logo.jpg" width="150px"></a></h1>
                     </div>
                 </div>
 
