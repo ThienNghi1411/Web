@@ -223,3 +223,14 @@ div.coupon input[type="text"] {
   border-bottom: 1px solid #eee;
   margin-bottom: 5px;
 }
+.active_star {
+  color:yellow;
+}
+
+
+.active_star_black {
+  color:black !important;
+}
+.active_hover {
+  color:yellow;
+}

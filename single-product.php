@@ -228,10 +228,10 @@ if (isset($_GET['id'])) {
                                     </div>
 
                                     <form action="" class="cart">
-                                        <div class="quantity">
+                                        <div class="quantity" >
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <button data-item='<?php echo json_encode($coc) ?>' class="add_to_cart_button" type="submit">Add to cart</button>
+                                        <button id = "btnadd" data-item='<?php echo json_encode($coc) ?>' class="add_to_cart_button" type="submit">Add to cart</button>
                                     </form>
 
                                     <div class="product-inner-category">
@@ -251,8 +251,8 @@ if (isset($_GET['id'])) {
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                                 <h2>Reviews</h2>
                                                 <div class="submit-review">
-                                                    <p><label for="name">Name</label> <input name="name" type="text"></p>
-                                                    <p><label for="email">Email</label> <input name="email" type="email"></p>
+                                                    <p><label for="name">Name</label> <input id = "ipreviewname" name="name" type="text"></p>
+                                                    <p><label for="email">Email</label> <input id = "ipreviewemail" name="email" type="email"></p>
                                                     <div class="rating-chooser">
                                                         <p>Your rating</p>
 
@@ -264,8 +264,8 @@ if (isset($_GET['id'])) {
                                                             <i data-item="4" class="fa fa-star"></i>
                                                         </div>
                                                     </div>
-                                                    <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-                                                    <p><input type="submit" value="Submit"></p>
+                                                    <p><label for="review">Your review</label> <textarea id = "txtreview" name="review" id="" cols="30" rows="10"></textarea></p>
+                                                    <p><input id = "submitreview" type="submit" value="Submit"></p>
                                                 </div>
                                             </div>
                                         </div>

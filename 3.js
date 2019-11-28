@@ -95,22 +95,64 @@ $(document).ready(function() {
         }
 
     })
+
     
+
+
+    $(".rating-wrap-post .fa.fa-star").click(function () {
+        let a = $(this).attr("data-item");
+        $(".rating-wrap-post .fa.fa-star").removeClass("active_star");
+        $(".fa.fa-star").each(function() {  
+            if($(this).data("item") <= a ){
+                $(this).addClass("active_star");
+            }
+        })
+    }
+);
+
+    var index = 0;
     // đánh giá sao
     $(".rating-wrap-post .fa.fa-star").hover(function () {
-            let a = $(this).attr("data-item");
+            index = $(this).attr("data-item");
             $(".fa.fa-star").each(function() {  
-               
-                $(this).css("color","yellow");
-                if(  $(this).attr("data-item") > a )  $(this).css("color","white");  
-            
+                
+                $(".rating-wrap-post .fa.fa-star").addClass("active_hover");  
+                if(  $(this).attr("data-item") > index )  $(this).addClass("active_star_black");  
+                
             })
             
         }, function () {
-           
-          
+            $(".rating-wrap-post .fa.fa-star").removeClass("active_star_black");
+            $(".rating-wrap-post .fa.fa-star").removeClass("active_hover");  
         }
     );
+
+     $("#submitreview").click(function  (){
+        let id =JSON.parse( $("#btnadd").attr("data-item")).id;
+         $.ajax({
+             url:"getdatareview.php",
+             method:"post",
+             type:"json",
+             data:{
+                 name:$("#ipreviewname").val(),
+                 email:$("#ipreviewemail").val(),
+                 vote:index,
+                 review:$('#txtreview').val(),
+                 id_product:id,
+             },
+             success:function(data){
+                
+                alert(data);
+                // window.location.reload();
+                
+                
+             }
+         })
+         
+         
+
+     })
+
 
  
       
