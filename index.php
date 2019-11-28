@@ -103,6 +103,7 @@
     
     <div class="mainmenu-area">
         <div class="container">
+            
             <div class="row">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -116,7 +117,7 @@
                 <ul class="nav navbar-nav">
                         <li class ="active"><a href="index.php">Trang chủ</a></li>
                         <li><a href="shop.php">Cửa hàng</a></li>
-                        <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                        <li><a href="single-product.php?id=1">Chi tiết</a></li>
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li><a href="checkout.php">Kiểm tra</a></li>
                         <li><a href="#">Phân loại</a></li>
@@ -221,12 +222,12 @@
                                 while($row = mysqli_fetch_assoc($result)){
     
                         ?>
-                            <div class="single-product">
+                            <div class="single-product" style="width:250px;height:400px">
                                 <div class="product-f-image">
                                     <img src=<?php echo $row['image']?> alt="">
                                     <div class="product-hover">
                                         <a data-item='<?php echo json_encode($row)?>' href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
-                                        <a href="single-product.php?id=<?php echo $row['id']?>" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
+                                        <a href="single-product.php?id=<?php echo $row['id']?>" class="view-details-link"><i class="fa fa-link"></i> Chi tiết</a>
                                     </div>
                                 </div>
                                 

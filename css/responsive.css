@@ -234,3 +234,7 @@ div.coupon input[type="text"] {
 .active_hover {
   color:yellow;
 }
+.product-f-image img {
+  width: 400px;
+  height: 300px;
+}
