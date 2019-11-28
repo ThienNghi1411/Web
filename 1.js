@@ -6,6 +6,9 @@ if (document.readyState == 'loading') {
 
 function ready()
 {
+    
+    
+    
 	// xoa item trong cart
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
 	var removecart = document.getElementsByClassName("remove");
@@ -16,7 +19,8 @@ function ready()
 	}
 
 	// cap nhat lai so luong cua item trong cart
-	
+    var Voucher = document.getElementById("Voucher");
+    Voucher.addEventListener('click',CheckCoupon)
 	var getQuantity = document.getElementsByClassName("input-text qty text");
 	for (var i = 0 ; i < getQuantity.length ; i++)
 	{
@@ -25,12 +29,29 @@ function ready()
 	}
     nameItem.forEach(function(value) {
         addItemToCart(value.name, value.price, value.image,value.quantity);
-
     })
     
 
 }
-
+var check = false;
+function CheckCoupon(event)
+{
+    event.preventDefault();
+    var Voucher = document.getElementById("coupon_code")
+    var Coupon = Voucher.value
+    if (Coupon == "2THANGNUATETROI" || Coupon =="THIENNGHIDEPTRAI" || Coupon =="KHONGROTMONNAO")
+    {
+        alert("Chúc mừng mã giảm giá của bạn đã được kích hoạt !!!")
+        alert("Đơn hàng của bạn được giảm giá 500000vnd!")    
+        check = true;
+        UpdateCart();
+    }
+    else
+    {
+        alert("Mã giảm giá không hợp lệ! Xin kiểm tra lại")
+    }
+    
+}
 function addItemToCart(title, price, imageSrc, Quantity) 
 {
     var cartRow = document.createElement('TR')
@@ -85,10 +106,20 @@ function UpdateCart()
         LastTotal = LastTotal + total;
         document.getElementsByClassName('totalamount')[i].innerText = total + " vnd"
     }
+    if (check == true)
+    {
+        LastTotal = LastTotal - 500000;
+        document.getElementsByClassName('Order-total-amount')[0].innerText = LastTotal + " vnd"
+        document.getElementsByClassName('Subtotal-amount')[0].innerText = LastTotal + " vnd"
+        return;
+    }
+    else
+    {
+        document.getElementsByClassName('Order-total-amount')[0].innerText = LastTotal + " vnd"
+        document.getElementsByClassName('Subtotal-amount')[0].innerText = LastTotal + " vnd"
+    }
 
-    document.getElementsByClassName('Order-total-amount')[0].innerText = LastTotal + " vnd"
-    document.getElementsByClassName('Subtotal-amount')[0].innerText = LastTotal + " vnd"
-    console.log(LastTotal)
+    
 }
 
 function UpdateQuantity(event)
