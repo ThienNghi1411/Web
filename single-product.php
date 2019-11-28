@@ -177,7 +177,7 @@ if (isset($_GET['id'])) {
                                     <img src="<?php echo $row['image'] ?>" class="recent-thumb" alt="">
                                     <h2><a href="single-product.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></h2>
                                     <div class="product-sidebar-price">
-                                        <ins><?php echo $row['price']?> VND</ins> <del></ins> <del><?php echo $row['price2']?> VND</del>
+                                        <ins><?php echo number_format($row['price'])?> VND</ins> <del></ins> <del><?php echo number_format($row['price2'])?> VND</del>
                                     </div>
                                 </div>
                         <?php }
@@ -296,7 +296,7 @@ if (isset($_GET['id'])) {
                                             <h2><a href=""><?php echo $row['name'] ?></a></h2>
 
                                             <div class="product-carousel-price">
-                                                <ins><?php echo $row['price'] ?> VND</ins> <del><?php echo $row['price2'] ?> VND</del>
+                                                <ins><?php echo number_format($row['price']) ?> VND</ins> <del><?php echo number_format($row['price2']) ?> VND</del>
                                             </div>
                                         </div>
 

@@ -117,9 +117,9 @@ include("./connect.php");
                 <ul class="nav navbar-nav">
                         <li><a href="index.php">Trang chủ</a></li>
                         <li><a href="shop.php?trang=1">Cửa hàng</a></li>
-                        <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                       
                         <li class ="active"><a href="cart.php">Giỏ hàng</a></li>
-                        <li><a href="checkout.php">Kiểm tra</a></li>
+                      
                      
                         <li><a href="#">Khác</a></li>
                         <li><a href="#">Liên hệ</a></li>
@@ -169,7 +169,7 @@ include("./connect.php");
                             <img src=<?php echo $row['image']?> class="recent-thumb" alt="">
                             <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                             <div class="product-sidebar-price">
-                                <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
+                                <ins>$<?php echo number_format($row['price'])?></ins> <del>$<?php echo number_format($row['price2'])?></del>
                             </div>
                         </div>
                             <?php }
@@ -192,7 +192,7 @@ include("./connect.php");
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="woocommerce">
-                            <form method="post" action="#">
+                            <form method="post" action="checkout.php">
                                 <table cellspacing="0" class="shop_table cart">
                                     <thead>
                                         <tr>
@@ -206,17 +206,7 @@ include("./connect.php");
                                     </thead>
                                     <tbody id="giohang">
                                        
-                                        <tr>
-                                            <td class="actions" colspan="6">
-                                                <div class="coupon">
-                                                    <label for="coupon_code">Mã giảm giá:</label>
-                                                    <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
-                                                    <input type="submit" value="Apply Coupon" name="apply_coupon" class="button">
-                                                </div>
-                                                <input type="submit" value="Update Cart" name="update_cart" class="button">
-                                                <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
-                                            </td>
-                                        </tr>
+                                       
                                     </tbody>
                                 </table>
                                 <table class="shop_table cart">
@@ -250,7 +240,7 @@ include("./connect.php");
                                         <a href="single-product.php?id=<?php echo $row['id']?>">
                                             <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
                                             <h3>Gửi ý tưởng của bạn</h3>
-                                            <span class="price"><span class="amount">$<?php echo $row['price']?></span></span>
+                                            <span class="price"><span class="amount">$<?php echo number_format($row['price'])?></span></span>
                                         </a>
 
                                         <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="22" rel="nofollow" href="single-product.php?id=<?php echo $row['id']?>">Select options</a>

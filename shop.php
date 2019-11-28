@@ -131,9 +131,9 @@ if (isset($_GET["name"])) {
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Trang chủ</a></li>
                         <li class="active"><a href="shop.php?trang=1">Cửa hàng</a></li>
-                        <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                       
                         <li><a href="cart.php">Giỏ hàng</a></li>
-                        <li><a href="checkout.php">Kiểm tra</a></li>
+                       
                     
                         <li><a href="#">Khác</a></li>
                         <li><a href="#">Liên hệ</a></li>
@@ -180,7 +180,7 @@ if (isset($_GET["name"])) {
                                 </div>
                                 <h2><a href="single-product.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></h2>
                                 <div class="product-carousel-price">
-                                    <ins><?php echo $row['price']?> VND</ins> <del>$<?php echo $row['price2']?> VND</del>
+                                    <ins><?php echo number_format($row['price'])?> VND</ins> <del>$<?php echo number_format($row['price2'])?> VND</del>
                                 </div>
 
                                 <div class="product-option-shop">

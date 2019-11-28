@@ -47,11 +47,11 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-                            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                            <li><a href="cart.php"><i class="fa fa-user"></i> My Cart</a></li>
-                            <li><a href="checkout.php"><i class="fa fa-user"></i> Checkout</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>
+                         
+                            <li><a href="cart.php"><i class="fa fa-user"></i>Giỏ hàng</a></li>
+                            <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,9 +117,9 @@
                 <ul class="nav navbar-nav">
                         <li class ="active"><a href="index.php">Trang chủ</a></li>
                         <li><a href="shop.php">Cửa hàng</a></li>
-                        <li><a href="single-product.php?id=1">Chi tiết</a></li>
+                       
                         <li><a href="cart.php">Giỏ hàng</a></li>
-                        <li><a href="checkout.php">Kiểm tra</a></li>
+                     
                        
                         <li><a href="#">Khác</a></li>
                         <li><a href="#">Liên hệ</a></li>
@@ -234,7 +234,7 @@
                                 <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
+                                    <ins><?php echo number_format($row['price'])?> VND</ins> <del><?php echo number_format($row['price2'])?> VND</del>
                                 </div> 
                             </div>
                                 <?php }
@@ -297,7 +297,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
+                                <ins><?php echo number_format($row['price'])?> VND</ins> <del><?php echo number_format($row['price2'])?> VND</del>
                             </div>                            
                         </div>
                         <?php   }
@@ -327,7 +327,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
+                                <ins><?php echo number_format($row['price'])?> VND</ins> <del><?php echo number_format($row['price2'])?> VND</del>
                             </div>                            
                         </div>
                         <?php   }
@@ -356,7 +356,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
+                                <ins><?php echo number_format($row['price'])?> VND</ins> <del><?php echo number_format($row['price2'])?> VND</del>
                             </div>                            
                         </div>
                         <?php   }
