@@ -125,7 +125,7 @@ if (isset($_GET['id'])) {
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Trang chủ</a></li>
                         <li><a href="shop.php?trang=1">Cửa hàng</a></li>
-                        <li class="active"><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                        <li class="active"><a href="single-product.php?id=1">Chi tiết</a></li>
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li><a href="checkout.php">Kiểm tra</a></li>
                         <li><a href="#">Phân loại</a></li>
@@ -243,7 +243,7 @@ if (isset($_GET['id'])) {
                                         </ul>
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="home">
-                                                <h2>Chi tiết sản phẩm</h2>
+                                                <h2>Chi tiết</h2>
                                                 <?php echo $coc['description'] ?>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
@@ -289,7 +289,7 @@ if (isset($_GET['id'])) {
                                                 <img src="<?php echo $row['image'] ?>" alt="">
                                                 <div class="product-hover">
                                                     <a data-item='<?php echo json_encode($row) ?>' href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>Cho vào giỏ hàng</a>
-                                                    <a href="single-product?id=<?php echo $row['id'] ?>" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
+                                                    <a href="single-product?id=<?php echo $row['id'] ?>" class="view-details-link"><i class="fa fa-link"></i> Chi tiết</a>
                                                 </div>
                                             </div>
 
