@@ -103,10 +103,11 @@
     
     <div class="mainmenu-area">
         <div class="container">
+            
             <div class="row">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Chuyển hướng</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -116,7 +117,7 @@
                 <ul class="nav navbar-nav">
                         <li class ="active"><a href="index.php">Trang chủ</a></li>
                         <li><a href="shop.php">Cửa hàng</a></li>
-                        <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                        <li><a href="single-product.php?id=1">Chi tiết</a></li>
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li><a href="checkout.php">Kiểm tra</a></li>
                         <li><a href="#">Phân loại</a></li>
@@ -212,7 +213,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Latest Products</h2>
+                        <h2 class="section-title">Sản phẩm mới nhất</h2>
                         <div class="product-carousel">
                         
                         <?php  
@@ -221,12 +222,12 @@
                                 while($row = mysqli_fetch_assoc($result)){
     
                         ?>
-                            <div class="single-product">
+                            <div class="single-product" style="width:250px;height:400px">
                                 <div class="product-f-image">
                                     <img src=<?php echo $row['image']?> alt="">
                                     <div class="product-hover">
-                                        <a data-item='<?php echo json_encode($row)?>' href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.php?id=<?php echo $row['id']?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a data-item='<?php echo json_encode($row)?>' href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
+                                        <a href="single-product.php?id=<?php echo $row['id']?>" class="view-details-link"><i class="fa fa-link"></i> Chi tiết</a>
                                     </div>
                                 </div>
                                 
@@ -277,8 +278,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="single-product-widget">
-                        <h2 class="product-wid-title">Top Sellers</h2>
-                        <a href="" class="wid-view-more">View All</a>
+                        <h2 class="product-wid-title">Mua nhiều nhất</h2>
+                        <a href="" class="wid-view-more">Xem tất cả</a>
                         <?php  
                             $result = mysqli_query($conn,"SELECT * FROM sanpham WHERE id < 4");
                             if (mysqli_num_rows($result) > 0) {
@@ -374,8 +375,8 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>u<span>Stora</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <h2>E<span>gle Cat Eye</span></h2>
+                        <p>Xưởng Thượng Tín với việc nằm ở TPHCM là điều hết sức thuận lợi cho khách hàng. Bạn có thể đến trực tiếp tại xưởng để bàn bạc và kiểm tra chất liệu vải, mẫu.Với kinh nghiệm lâu năm trong nghề. Chúng tôi sẽ mang đến cho bạn những chiếc áo khoác quảng cáo có giá tốt nhất.</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -387,13 +388,13 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                        <h2 class="footer-wid-title">Chuyển hướng người dùng  </h2>
                         <ul>
-                            <li><a href="#">My account</a></li>
-                            <li><a href="#">Order history</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Vendor contact</a></li>
-                            <li><a href="#">Front page</a></li>
+                            <li><a href="#">Tài khoản người dùng</a></li>
+                            <li><a href="">Lịch sử đặt hàng</a></li>
+                            <li><a href="">Danh sách </a></li>
+                            <li><a href="">Liên hệ nhà sản xuất</a></li>
+                            <li><a href="">Trang chủ</a></li>
                         </ul>                        
                     </div>
                 </div>
@@ -413,8 +414,8 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                        <h2 class="footer-wid-title">Người mới</h2>
+                        <p>Đăng ký để nhận thông báo mới nhất !!</p>
                         <div class="newsletter-form">
                             <form action="#">
                                 <input type="email" placeholder="Type your email">
@@ -432,7 +433,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2015 thương mại điện tử . Đã đăng ký bản quyền <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
                 

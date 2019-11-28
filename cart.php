@@ -48,32 +48,32 @@ include("./connect.php");
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-                            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                            <li><a href="cart.php"><i class="fa fa-user"></i> My Cart</a></li>
-                            <li><a href="checkout.php"><i class="fa fa-user"></i> Checkout</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> Danh sách sản phẩm</a></li>
+                            <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
+                            <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i>Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="header-right">
+                <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Tiền tệ :</span><span class="value">VNĐ </span><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#">VNĐ</a></li>
                                     <li><a href="#">USD</a></li>
-                                    <li><a href="#">INR</a></li>
                                     <li><a href="#">GBP</a></li>
                                 </ul>
                             </li>
 
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Ngôn ngữ :</span><span class="value">Tiếng Việt </span><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#">Tiếng Việt</a></li>
                                     <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
                                     <li><a href="#">German</a></li>
                                 </ul>
                             </li>
@@ -95,7 +95,7 @@ include("./connect.php");
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.php">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="cart.php">Giỏ hàng <span class="cart-amunt">50 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@ include("./connect.php");
             <div class="row">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Chuyển hướng</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -134,7 +134,7 @@ include("./connect.php");
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Shopping Cart</h2>
+                    <h2>Cửa hàng</h2>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@ include("./connect.php");
             <div class="row">
                 <div class="col-md-4">
                 <div class="single-sidebar">
-                        <h2 class="sidebar-title">Search Products</h2>
+                        <h2 class="sidebar-title">Tìm kiếm</h2>
                         <form action="shop.php" method="GET" autocomplete="off">
                             <input id="ipSearch" name="name" type="text" placeholder="Search products...">
                             <input type="submit" id = "Ssubmit" value="Search">
@@ -158,7 +158,7 @@ include("./connect.php");
                     </div>
                     
                     <div class="single-sidebar">
-                        <h2 class="sidebar-title">Products</h2>
+                        <h2 class="sidebar-title">Sản phẩm</h2>
                         <?php
                             $sqlSelect = "SELECT * FROM sanpham LIMIT 0,4";
                             $result = mysqli_query($conn, $sqlSelect);
@@ -178,7 +178,7 @@ include("./connect.php");
                     </div>
                     
                     <div class="single-sidebar">
-                        <h2 class="sidebar-title">Recent Posts</h2>
+                        <h2 class="sidebar-title">Bán chạy</h2>
                         <ul>
                             <li><a href="#">Sony Smart TV - 2015</a></li>
                             <li><a href="#">Sony Smart TV - 2015</a></li>
@@ -198,14 +198,53 @@ include("./connect.php");
                                         <tr>
                                             <th class="product-remove">&nbsp;</th>
                                             <th class="product-thumbnail">&nbsp;</th>
-                                            <th class="product-name">Product</th>
-                                            <th class="product-price">Price</th>
-                                            <th class="product-quantity">Quantity</th>
-                                            <th class="product-subtotal">Total</th>
+                                            <th class="product-name">Sản phẩm</th>
+                                            <th class="product-price">Giá</th>
+                                            <th class="product-quantity">Số lượng</th>
+                                            <th class="product-subtotal">Tổng cộng</th>
                                         </tr>
                                     </thead>
                                     <tbody id="giohang">
-                                        
+                                        <tr class="cart_item">
+                                            <td class="product-remove">
+                                                <a title="Remove this item" class="remove" href="#">×</a> 
+                                            </td>
+
+                                            <td class="product-thumbnail">
+                                                <a href="single-product.php"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/product-thumb-2.jpg"></a>
+                                            </td>
+
+                                            <td class="product-name">
+                                                <a href="single-product.php">Gửi ý tưởng của bạn</a> 
+                                            </td>
+
+                                            <td class="product-price">
+                                                <span class="amount">£15.00</span> 
+                                            </td>
+
+                                            <td class="product-quantity">
+                                                <div class="quantity buttons_added">
+                                                    <input type="button" class="minus" value="-">
+                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+                                                    <input type="button" class="plus" value="+">
+                                                </div>
+                                            </td>
+
+                                            <td class="product-subtotal">
+                                                <span class="amount">£15.00</span> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions" colspan="6">
+                                                <div class="coupon">
+                                                    <label for="coupon_code">Mã giảm giá:</label>
+                                                    <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
+                                                    <input type="submit" value="Apply Coupon" name="apply_coupon" class="button">
+                                                </div>
+                                                <input type="submit" value="Update Cart" name="update_cart" class="button">
+                                                <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                                 <table class="shop_table cart">
@@ -227,7 +266,7 @@ include("./connect.php");
 
 
                             <div class="cross-sells">
-                                <h2>You may be interested in...</h2>
+                                <h2>Có thể bạn quan tâm</h2>
                                 <ul class="products">
                                 <?php
                                     $sqlSelect = "SELECT * FROM sanpham LIMIT 0,2";
@@ -238,7 +277,7 @@ include("./connect.php");
                                     <li class="product">
                                         <a href="single-product.php?id=<?php echo $row['id']?>">
                                             <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
-                                            <h3>Ship Your Idea</h3>
+                                            <h3>Gửi ý tưởng của bạn</h3>
                                             <span class="price"><span class="amount">$<?php echo $row['price']?></span></span>
                                         </a>
 
@@ -253,22 +292,22 @@ include("./connect.php");
 
 
                             <div class="cart_totals ">
-                                <h2>Cart Totals</h2>
+                                <h2>Tổng đơn hàng</h2>
 
                                 <table cellspacing="0">
                                     <tbody>
                                         <tr class="cart-subtotal">
-                                            <th>Cart Subtotal</th>
+                                            <th>Tổng đơn hàng</th>
                                             <td><span class="Subtotal-amount">£15.00</span></td>
                                         </tr>
 
                                         <tr class="shipping">
-                                            <th>Shipping and Handling</th>
-                                            <td>Free Shipping</td>
+                                            <th>Giao và nhận hàng</th>
+                                            <td>Miễn phí giao hàng</td>
                                         </tr>
 
                                         <tr class="order-total">
-                                            <th>Order Total</th>
+                                            <th>Tổng cộng</th>
                                             <td><strong><span class="Order-total-amount">£15.00</span></strong> </td>
                                         </tr>
                                     </tbody>
@@ -277,13 +316,13 @@ include("./connect.php");
 
 
                             <form method="post" action="#" class="shipping_calculator">
-                                <h2><a class="shipping-calculator-button" data-toggle="collapse" href="#calcalute-shipping-wrap" aria-expanded="false" aria-controls="calcalute-shipping-wrap">Calculate Shipping</a></h2>
+                                <h2><a class="shipping-calculator-button" data-toggle="collapse" href="#calcalute-shipping-wrap" aria-expanded="false" aria-controls="calcalute-shipping-wrap">Tính Giao hàng</a></h2>
 
                                 <section id="calcalute-shipping-wrap" class="shipping-calculator-form collapse">
 
                                 <p class="form-row form-row-wide">
                                 <select rel="calc_shipping_state" class="country_to_state" id="calc_shipping_country" name="calc_shipping_country">
-                                    <option value="">Select a country…</option>
+                                    <option value="">Chọn quốc gia...</option>
                                     <option value="AX">Åland Islands</option>
                                     <option value="AF">Afghanistan</option>
                                     <option value="AL">Albania</option>
@@ -531,12 +570,12 @@ include("./connect.php");
                                 </select>
                                 </p>
 
-                                <p class="form-row form-row-wide"><input type="text" id="calc_shipping_state" name="calc_shipping_state" placeholder="State / county" value="" class="input-text"> </p>
+                                <p class="form-row form-row-wide"><input type="text" id="calc_shipping_state" name="calc_shipping_state" placeholder="Quốc gia" value="" class="input-text"> </p>
 
-                                <p class="form-row form-row-wide"><input type="text" id="calc_shipping_postcode" name="calc_shipping_postcode" placeholder="Postcode / Zip" value="" class="input-text"></p>
+                                <p class="form-row form-row-wide"><input type="text" id="calc_shipping_postcode" name="calc_shipping_postcode" placeholder="Mã bưu điện" value="" class="input-text"></p>
 
 
-                                <p><button class="button" value="1" name="calc_shipping" type="submit">Update Totals</button></p>
+                                <p><button class="button" value="1" name="calc_shipping" type="submit">Tính tiền</button></p>
 
                                 </section>
                             </form>
@@ -558,7 +597,7 @@ include("./connect.php");
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
                         <h2>u<span>Stora</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <p>Xưởng Thượng Tín với việc nằm ở TPHCM là điều hết sức thuận lợi cho khách hàng. Bạn có thể đến trực tiếp tại xưởng để bàn bạc và kiểm tra chất liệu vải, mẫu.Với kinh nghiệm lâu năm trong nghề. Chúng tôi sẽ mang đến cho bạn những chiếc áo khoác quảng cáo có giá tốt nhất.</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -570,38 +609,37 @@ include("./connect.php");
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                    <h2 class="footer-wid-title">Điều hướng người dùng </h2>
                         <ul>
-                            <li><a href="#">My account</a></li>
-                            <li><a href="#">Order history</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Vendor contact</a></li>
-                            <li><a href="#">Front page</a></li>
+                            <li><a href="">Tài khoản người dùng</a></li>
+                            <li><a href="">Lịch sử đặt hàng</a></li>
+                            <li><a href="">Danh sách </a></li>
+                            <li><a href="">Liên hệ nhà sản xuất</a></li>
+                            <li><a href="">Trang chủ</a></li>
                         </ul>                        
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categories</h2>
+                    <h2 class="footer-wid-title">Phân loại</h2>
                         <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            <li><a href="#">Home accesseries</a></li>
-                            <li><a href="#">LED TV</a></li>
-                            <li><a href="#">Computer</a></li>
-                            <li><a href="#">Gadets</a></li>
+                            <li><a href="">Áo khoác</a></li>
+                            <li><a href="">Áo thun</a></li>
+                            <li><a href="">Giày</a></li>
+                           
                         </ul>                        
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                        <h2 class="footer-wid-title">Người mới</h2>
+                        <p>Đăng ký để nhận thông báo mới nhất !!</p>
                         <div class="newsletter-form">
                             <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Subscribe">
+                                <input type="email" placeholder="Nhập gmail">
+                                <input type="submit" value="Đăng ký">
                             </form>
                         </div>
                     </div>
@@ -615,7 +653,7 @@ include("./connect.php");
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2015 Thương mại điện tử . Đăng ký bản quyền. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
                 

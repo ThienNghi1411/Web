@@ -38,7 +38,7 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
     <script src="3.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -115,7 +115,7 @@ if (isset($_GET['id'])) {
             <div class="row">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Chuyển hướng</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -142,7 +142,7 @@ if (isset($_GET['id'])) {
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Shop</h2>
+                        <h2>Cửa hàng</h2>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@ if (isset($_GET['id'])) {
             <div class="row">
                 <div class="col-md-4">
                     <div class="single-sidebar">
-                        <h2 class="sidebar-title">Search Products</h2>
+                        <h2 class="sidebar-title">Tìm kiếm sản phẩm</h2>
                         <form action="shop.php" method="GET" autocomplete="off">
                             <input id="ipSearch" name= "name" type="text" placeholder="Tìm kiếm sản phẩm">
                             <input type="submit" id="Ssubmit" value="Tìm kiếm ">
@@ -177,7 +177,7 @@ if (isset($_GET['id'])) {
                                     <img src="<?php echo $row['image'] ?>" class="recent-thumb" alt="">
                                     <h2><a href="single-product.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></h2>
                                     <div class="product-sidebar-price">
-                                        <ins>$<?php echo $row['price'] ?></ins> <del>$<?php echo $row['price2'] ?></del>
+                                        <ins><?php echo $row['price']?> VND</ins> <del></ins> <del><?php echo $row['price2']?> VND</del>
                                     </div>
                                 </div>
                         <?php }
@@ -203,8 +203,8 @@ if (isset($_GET['id'])) {
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
-                            <a href="">Home</a>
-                            <a href="">Category Name</a>
+                            <a href="">Trang chủ</a>
+                            <a href="">Phân loại</a>
                             <a href="">Sony Smart TV - 2015</a>
                         </div>
 
@@ -224,37 +224,35 @@ if (isset($_GET['id'])) {
                                 <div class="product-inner">
                                     <h2 class="product-name"><?php echo $coc['name'] ?></h2>
                                     <div class="product-inner-price">
-                                        <ins>$<?php echo $coc['price'] ?></ins> <del>$<?php echo $coc['price2'] ?></del>
+                                        <ins><?php echo $coc['price'] ?> VND</ins> <del><?php echo $coc['price2'] ?> VND</del>
                                     </div>
 
                                     <form action="" class="cart">
-                                        <div class="quantity">
+                                        <div class="quantity" >
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <button data-item='<?php echo json_encode($coc) ?>' class="add_to_cart_button" type="submit">Add to cart</button>
+                                        <button id = "btnadd" data-item='<?php echo json_encode($coc) ?>' class="add_to_cart_button" type="submit">Cho vào giỏ</button>
                                     </form>
 
-                                    <div class="product-inner-category">
-                                        <p>Category: <a href="">Summer</a>. Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
-                                    </div>
+                                   
 
                                     <div role="tabpanel">
                                         <ul class="product-tab" role="tablist">
-                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
-                                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li>
+                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Chi tiết</a></li>
+                                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Nhận xét</a></li>
                                         </ul>
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="home">
-                                                <h2>Product Description</h2>
+                                                <h2>Chi tiết sản phẩm</h2>
                                                 <?php echo $coc['description'] ?>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
-                                                <h2>Reviews</h2>
+                                                <h2>Nhận xét</h2>
                                                 <div class="submit-review">
-                                                    <p><label for="name">Name</label> <input name="name" type="text"></p>
-                                                    <p><label for="email">Email</label> <input name="email" type="email"></p>
+                                                    <p><label for="name">Tên</label> <input id = "ipreviewname" name="name" type="text"></p>
+                                                    <p><label for="email">Gmail</label> <input id = "ipreviewemail" name="email" type="email"></p>
                                                     <div class="rating-chooser">
-                                                        <p>Your rating</p>
+                                                        <p>Đánh giá của bạn</p>
 
                                                         <div class="rating-wrap-post">
                                                             <i data-item="0" class="fa fa-star"></i>
@@ -264,8 +262,8 @@ if (isset($_GET['id'])) {
                                                             <i data-item="4" class="fa fa-star"></i>
                                                         </div>
                                                     </div>
-                                                    <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-                                                    <p><input type="submit" value="Submit"></p>
+                                                    <p><label for="review">Nhận xét của bạn</label> <textarea id = "txtreview" name="review" id="" cols="30" rows="10"></textarea></p>
+                                                    <p><input id = "submitreview" type="submit" value="Submit"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -277,7 +275,7 @@ if (isset($_GET['id'])) {
 
 
                         <div class="related-products-wrapper">
-                            <h2 class="related-products-title">Related Products</h2>
+                            <h2 class="related-products-title">Sản phẩm liên quan</h2>
                             <div class="related-products-carousel">
                                 <?php
                                 $sqlSelect = "SELECT * FROM sanpham LIMIT 6,7";
@@ -290,15 +288,15 @@ if (isset($_GET['id'])) {
                                             <div class="product-f-image">
                                                 <img src="<?php echo $row['image'] ?>" alt="">
                                                 <div class="product-hover">
-                                                    <a data-item='<?php echo json_encode($row) ?>' href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                                    <a href="single-product?id=<?php echo $row['id'] ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                                    <a data-item='<?php echo json_encode($row) ?>' href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>Cho vào giỏ hàng</a>
+                                                    <a href="single-product?id=<?php echo $row['id'] ?>" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
                                                 </div>
                                             </div>
 
                                             <h2><a href=""><?php echo $row['name'] ?></a></h2>
 
                                             <div class="product-carousel-price">
-                                                <ins>$<?php echo $row['price'] ?></ins> <del>$<?php echo $row['price2'] ?></del>
+                                                <ins><?php echo $row['price'] ?> VND</ins> <del><?php echo $row['price2'] ?> VND</del>
                                             </div>
                                         </div>
 
@@ -320,8 +318,10 @@ if (isset($_GET['id'])) {
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>u<span>Stora</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <h2>E<span>gle Cat eye</span></h2>
+                        <p>Xưởng Thượng Tín với việc nằm ở TPHCM là điều hết sức thuận lợi cho khách hàng. Bạn có thể đến trực tiếp tại xưởng để bàn bạc và kiểm tra chất liệu vải, mẫu.Với kinh nghiệm lâu năm trong nghề. Chúng tôi sẽ mang đến cho bạn những chiếc áo khoác quảng cáo có giá tốt nhất.
+
+</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -375,7 +375,7 @@ if (isset($_GET['id'])) {
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                       <p>&copy; chứng nhận 2015  đã đăng ký bản quyền <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
 
