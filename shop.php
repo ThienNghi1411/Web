@@ -134,7 +134,7 @@ if (isset($_GET["name"])) {
                         <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li><a href="checkout.php">Kiểm tra</a></li>
-                        <li><a href="#">Phân loại</a></li>
+                    
                         <li><a href="#">Khác</a></li>
                         <li><a href="#">Liên hệ</a></li>
                     </ul>
