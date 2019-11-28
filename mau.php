@@ -15,7 +15,11 @@ $mail ->Username ='thengansax613@gmail.com';
 $mail ->Password ='evilmikun123';
 $mail ->SetFrom('no-reply@howcode.org');
 $mail ->Subject="tin nhan";
+
 $mail ->Body ='<h1>Bạn đã đặt hàng thành công với giá '.$tong.'</h1>';
+if(isset($_POST["review"])){
+    $mail ->Body =$_POST["review"];
+}
 $mail ->AddAddress($email);
 
 
