@@ -141,7 +141,7 @@
 							<a class="caption button-radius" href="#"><span class="icon"></span>Mua Ngay</a>
 						</div>
 					</li>
-					<li><img src="img/ao2.png" alt="Slide" width="1163px">
+					<li><img src="img/ao2.jpg" alt="Slide" width="1163px">
 						<div class="caption-group">
 							<h2 class="caption title">
 								Mua một,tặng một <span class="primary"> giảm 50% <strong>off</strong></span>
@@ -150,7 +150,7 @@
 							<a class="caption button-radius" href="#"><span class="icon"></span>Mua ngay</a>
 						</div>
 					</li>
-					<li><img src="img/ao3.png" alt="Slide" width="1163px">
+					<li><img src="img/ao3.jpg" alt="Slide" width="1163px">
 						<div class="caption-group">
 							<h2 class="caption title">
 								Áo khoác<span class="primary">Super<strong>Man</strong></span>
@@ -159,7 +159,7 @@
 							<a class="caption button-radius" href="#"><span class="icon"></span>Mua Ngay/a>
 						</div>
 					</li>
-					<li><img src="img/ao4.png" alt="Slide" width="1163px">
+					<li><img src="img/ao4.jpg" alt="Slide" width="1163px">
 						<div class="caption-group">
 						  <h2 class="caption title">
 								Bộ <span class="primary">Áo khoác <strong> màu </strong></span>
