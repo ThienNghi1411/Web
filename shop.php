@@ -180,7 +180,7 @@ if (isset($_GET["name"])) {
                                 </div>
                                 <h2><a href="single-product.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></h2>
                                 <div class="product-carousel-price">
-                                    <ins>$<?php echo $row['price'] ?></ins> <del>$<?php echo $row['price2'] ?></del>
+                                    <ins><?php echo $row['price']?> VND</ins> <del>$<?php echo $row['price2']?> VND</del>
                                 </div>
 
                                 <div class="product-option-shop">
@@ -211,8 +211,8 @@ if (isset($_GET["name"])) {
                                 $sotrang = ceil($tongproduct / $productrang);
                                 for ($i = 1; $i <= $sotrang; ++$i) {
 
-                                    ?>
-                                    <li><a href="shop.php? trang=<?php echo $i ?>  "><?php echo $i ?></a></li>
+                                ?>
+                                    <li><a href="shop.php?trang=<?php echo $i?>&name=<?php echo $name?>"><?php echo $i ?></a></li>
                                 <?php } ?>
                                 <li>
                                     <a href="#" aria-label="Next">

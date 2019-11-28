@@ -113,3 +113,54 @@ function removeCartItem(event,i)
 }
 
 
+$(document).ready(function() {
+    $("#h2search").hide();
+    $('#h2search').on("click", "p", function() {
+        $name = $(this).text();
+    })
+    $(document).click(function(){
+        let id = $(this).attr("id");
+        if(id !== "ipSearch"  ) {
+            $("#h2search").hide();
+        }
+    })
+    $('#ipSearch').keyup(function(e) {
+        if ($('#ipSearch').val() == "") {
+            $("#h2search").html('');
+            $("#h2search").hide();
+        } else {
+            $("#h2search").show();
+            $.ajax({
+                url: "search.php",
+                method: "get",
+                type: "json",
+                data: {
+                    name: $(this).val()
+                },
+                success: function(data) {
+                    
+                    let list = JSON.parse(data);
+                   
+                   
+                    if (list != "") {
+                        
+                        $('#h2search').html("");
+                        list.forEach(function(value) {
+                            $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
+
+                        })
+                    }else{
+                        $('#h2search').html("");
+                        $('#h2search').append(`  Không tìm thấy `);
+                    }
+
+                }
+
+            });
+        }
+
+    })
+
+
+
+});

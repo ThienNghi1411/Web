@@ -30,48 +30,16 @@ include("./connect.php");
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="1.js"></script
+   
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="1.js"></script>
   </head>
-  <script>
-   $(document).ready(function () {
-        
-        $('#ipSearch').keyup(function(e){
-           console.log("heo");
-            if($('#ipSearch').val()==""){
-                $("#h2search").html('');
-            }else{
-                $.ajax({
-                    url:"search.php",
-                    method:"get",
-                    type:"json",
-                    data:{name: $(this).val()},
-                    success:function(data){
-                       
-                         let list = JSON.parse(data);
-                     //   console.log(list);
-                        $('#h2search').html("");
-                         list.forEach(function(value){
-                          $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
-                        
-                      })
-                    }
-
-                });
-            }
-           
-        })
-      
-    
-
-    });
-</script>
+  
   <body>
    
     <div class="header-area">
@@ -181,7 +149,7 @@ include("./connect.php");
                 <div class="col-md-4">
                 <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
-                        <form action="shop.php" method="GET">
+                        <form action="shop.php" method="GET" autocomplete="off">
                             <input id="ipSearch" name="name" type="text" placeholder="Search products...">
                             <input type="submit" id = "Ssubmit" value="Search">
                             
@@ -268,7 +236,7 @@ include("./connect.php");
                                         while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
                                     <li class="product">
-                                        <a href="single-product.php?id==<?php echo $row['id']?>">
+                                        <a href="single-product.php?id=<?php echo $row['id']?>">
                                             <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
                                             <h3>Ship Your Idea</h3>
                                             <span class="price"><span class="amount">$<?php echo $row['price']?></span></span>

@@ -158,7 +158,7 @@ if (isset($_GET['id'])) {
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
                         <form action="shop.php" method="GET" autocomplete="off">
-                            <input id="ipSearch" name="name" type="text" placeholder="Tìm kiếm sản phẩm">
+                            <input id="ipSearch" name= "name" type="text" placeholder="Tìm kiếm sản phẩm">
                             <input type="submit" id="Ssubmit" value="Tìm kiếm ">
 
                         </form>

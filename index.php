@@ -233,7 +233,7 @@
                                 <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins>$<?php echo $row['price']?></ins> <del>$<?php echo $row['price2']?></del>
+                                    <ins><?php echo $row['price']?> VND</ins> <del><?php echo $row['price2']?> VND</del>
                                 </div> 
                             </div>
                                 <?php }
