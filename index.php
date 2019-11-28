@@ -105,7 +105,7 @@
             <div class="row">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Chuyển hướng</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -211,14 +211,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Latest Products</h2>
+                        <h2 class="section-title">Sản phẩm mới nhất</h2>
                         <div class="product-carousel">
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-1.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
+                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
                                     </div>
                                 </div>
                                 
@@ -232,8 +232,8 @@
                                 <div class="product-f-image">
                                     <img src="img/product-2.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
+                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
                                     </div>
                                 </div>
                                 
@@ -246,8 +246,8 @@
                                 <div class="product-f-image">
                                     <img src="img/product-3.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
+                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
                                     </div>
                                 </div>
                                 
@@ -261,8 +261,8 @@
                                 <div class="product-f-image">
                                     <img src="img/product-4.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
+                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i>Chi tiết sản phẩm</a>
                                     </div>
                                 </div>
                                 
@@ -276,8 +276,8 @@
                                 <div class="product-f-image">
                                     <img src="img/product-5.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
+                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
                                     </div>
                                 </div>
                                 
@@ -291,8 +291,8 @@
                                 <div class="product-f-image">
                                     <img src="img/product-6.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Cho vào giỏ</a>
+                                        <a href="single-product.php" class="view-details-link"><i class="fa fa-link"></i> Chi tiết sản phẩm</a>
                                     </div>
                                 </div>
                                 
@@ -337,8 +337,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="single-product-widget">
-                        <h2 class="product-wid-title">Top Sellers</h2>
-                        <a href="" class="wid-view-more">View All</a>
+                        <h2 class="product-wid-title">Mua nhiều nhất</h2>
+                        <a href="" class="wid-view-more">Xem tất cả</a>
                         <div class="single-wid-product">
                             <a href="single-product.php"><img src="img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.php">Sony Smart TV - 2015</a></h2>
@@ -489,8 +489,8 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>u<span>Stora</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <h2>E<span>gle Cat Eye</span></h2>
+                        <p>Xưởng Thượng Tín với việc nằm ở TPHCM là điều hết sức thuận lợi cho khách hàng. Bạn có thể đến trực tiếp tại xưởng để bàn bạc và kiểm tra chất liệu vải, mẫu.Với kinh nghiệm lâu năm trong nghề. Chúng tôi sẽ mang đến cho bạn những chiếc áo khoác quảng cáo có giá tốt nhất.</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -502,7 +502,7 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                        <h2 class="footer-wid-title">Chuyển hướng người dùng </h2>
                            <ul>
                             <li><a href="">Tài khoản người dùng</a></li>
                             <li><a href="">Lịch sử đặt hàng</a></li>
@@ -546,7 +546,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2015 thương mại điện tử . Đã đăng ký bản quyền <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
                 
