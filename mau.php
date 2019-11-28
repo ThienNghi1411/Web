@@ -1,7 +1,9 @@
 <?php
-
+include("./connect.php");
+$email = $_POST["email"];
+$tong = $_POST["tong"];
 require 'PHPMailer/PHPMailerAutoload.php';
-
+var_dump($email);
 $mail = new PHPMailer();
 $mail->isSMTP();
 $mail ->SMTPAuth = true;
@@ -13,8 +15,8 @@ $mail ->Username ='thengansax613@gmail.com';
 $mail ->Password ='evilmikun123';
 $mail ->SetFrom('no-reply@howcode.org');
 $mail ->Subject="tin nhan";
-$mail ->Body ='<h1>coc</h1>';
-$mail ->AddAddress('concockun@gmail.com');
+$mail ->Body ='<h1>Bạn đã đặt hàng thành công với giá '.$tong.'</h1>';
+$mail ->AddAddress($email);
 
 
 if(!$mail->send()) {

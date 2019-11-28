@@ -106,11 +106,14 @@ function UpdateCart()
         LastTotal = LastTotal + total;
         document.getElementsByClassName('totalamount')[i].innerText = total + " vnd"
     }
+
     if (check == true)
     {
         LastTotal = LastTotal - 500000;
-        document.getElementsByClassName('Order-total-amount')[0].innerText = LastTotal + " vnd"
-        document.getElementsByClassName('Subtotal-amount')[0].innerText = LastTotal + " vnd"
+        document.getElementsByClassName('Order-total-amount')[0].innerText = LastTotal + " vnd";
+        document.getElementsByClassName('Subtotal-amount')[0].innerText = LastTotal + " vnd";
+    
+        sessionStorage.setItem("total",LastTotal);
         return;
     }
     else
@@ -118,7 +121,7 @@ function UpdateCart()
         document.getElementsByClassName('Order-total-amount')[0].innerText = LastTotal + " vnd"
         document.getElementsByClassName('Subtotal-amount')[0].innerText = LastTotal + " vnd"
     }
-
+    sessionStorage.setItem("total",LastTotal);
     
 }
 

@@ -235,7 +235,7 @@ include("./connect.php");
                                 <div class="clear"></div>
                             </form>
 
-                            <form enctype="multipart/form-data" action="#" class="checkout" method="post" name="checkout">
+                          
 
                                 <div id="customer_details" class="col2-set">
                                     <div class="col-1">
@@ -540,7 +540,7 @@ include("./connect.php");
                                             <div class="clear"></div>
 
                                             <p id="billing_email_field" class="form-row form-row-first validate-required validate-email">
-                                                <label class="" for="billing_email">Địa chỉ email <abbr title="required" class="required">*</abbr>
+                                                <label id = "emailcheckout" for="billing_email">Địa chỉ email <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="text" value="" placeholder="" id="billing_email" name="billing_email" class="input-text ">
                                             </p>
@@ -909,7 +909,7 @@ include("./connect.php");
 
                                             <tr class="cart-subtotal">
                                                 <th>Giá trị đơn hàng:</th>
-                                                <td><span class="Totalamount">£15.00</span>
+                                                <td><span class="Orderamount">£15.00</span>
                                                 </td>
                                             </tr>
 
@@ -925,7 +925,7 @@ include("./connect.php");
 
                                             <tr class="order-total">
                                                 <th>Đơn giá cuối</th>
-                                                <td><strong><span class="amount">£15.00</span></strong> </td>
+                                                <td><strong><span class="amount Totalamount">£15.00</span></strong> </td>
                                             </tr>
 
                                         </tfoot>
@@ -960,7 +960,7 @@ include("./connect.php");
 
                                         <div class="form-row place-order">
 
-                                            <input type="submit" data-value="Place order" value="Place order" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
+                                            <input type="submit"  data-value="Place order" value="Thanh toán" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
 
 
                                         </div>
@@ -969,8 +969,7 @@ include("./connect.php");
 
                                     </div>
                                 </div>
-                            </form>
-
+                            
                         </div>                       
                     </div>                    
                 </div>

@@ -6,14 +6,36 @@ if (document.readyState == 'loading') {
 
 function ready()
 {
+
+    
+        let a = JSON.parse (sessionStorage.getItem("total"));
+        $("#place_order").click(function (e) {
+            e.preventDefault()
+            $.ajax({
+                method: "post",
+                url:"mau.php",
+                data: {
+                    email: $("#billing_email").val(),
+                    tong:a
+                    
+                },
+                success:function() {
+                    alert("Thành công ");
+                }
+        
+            })
+        });
+  
+      
+    
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
     nameItem.forEach(function(value) {
-        addItemToOrder(value.name, value.price);
+        addItemToOrder(value.name, value.price*value.quantity,value.quantity);
     })
     updateTotal();
 }
 
-function addItemToOrder(title, price) 
+function addItemToOrder(title, price,quantity) 
 {
     var cartRow = document.createElement('TR')
     cartRow.classList.add('cart_item')
@@ -21,7 +43,7 @@ function addItemToOrder(title, price)
 
     var cartRowContents = `
     <td class="product-name">
-    ${title} <strong class="product-quantity">× 1</strong> </td>
+    ${title} <strong class="product-quantity">x ${quantity}</strong> </td>
     <td class="product-total">
     <span class="amount">${price}</span> </td> `
 
@@ -38,10 +60,14 @@ function updateTotal()
     {
         var price = parseFloat(priceElement[i].innerText);
         console.log(price)
-
+        if(price)
         LastTotal = LastTotal + price;
         
     }
-    document.getElementsByClassName('Orderamount')[0].innerText = LastTotal + " vnd"
-    document.getElementsByClassName('Totalamount')[0].innerText = LastTotal + " vnd"
+    document.getElementsByClassName('Orderamount')[0].innerText =  LastTotal+ " vnd";
+    document.getElementsByClassName('Totalamount')[0].innerText = sessionStorage.getItem("total") + " vnd";
 }
+
+
+
+
