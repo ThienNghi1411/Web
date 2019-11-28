@@ -89,7 +89,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.php">Giỏ hàng <span class="cart-amunt">100 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart.php">Giỏ hàng <span class="cart-amunt">50 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
             <div class="row">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Chuyển hướng</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -128,7 +128,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Shopping Cart</h2>
+                        <h2>Cửa hàng</h2>
                     </div>
                 </div>
             </div>
@@ -196,21 +196,21 @@
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="woocommerce">
-                            <div class="woocommerce-info">Returning customer? <a class="showlogin" data-toggle="collapse" href="#login-form-wrap" aria-expanded="false" aria-controls="login-form-wrap">Click here to login</a>
+                            <div class="woocommerce-info">Bạn là khách hàng thân thiết? <a class="showlogin" data-toggle="collapse" href="#login-form-wrap" aria-expanded="false" aria-controls="login-form-wrap">Bấm vào đây để đăng nhập</a>
                             </div>
 
                             <form id="login-form-wrap" class="login collapse" method="post">
 
 
-                                <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer please proceed to the Billing &amp; Shipping section.</p>
+                                <p>Nếu bạn đã mua hàng trướng đây, xin hãy điền thông tin ở bên dưới. Nếu bạn là khách hàng mới xin hãy tiến hành thanh toán &amp; ở ô thanh toán sản phẩm.</p>
 
                                 <p class="form-row form-row-first">
-                                    <label for="username">Username or email <span class="required">*</span>
+                                    <label for="username">Tên hoặc gmail đăng nhập <span class="required">*</span>
                                     </label>
                                     <input type="text" id="username" name="username" class="input-text">
                                 </p>
                                 <p class="form-row form-row-last">
-                                    <label for="password">Password <span class="required">*</span>
+                                    <label for="password">Mật khẩu<span class="required">*</span>
                                     </label>
                                     <input type="password" id="password" name="password" class="input-text">
                                 </p>
@@ -219,22 +219,22 @@
 
                                 <p class="form-row">
                                     <input type="submit" value="Login" name="login" class="button">
-                                    <label class="inline" for="rememberme"><input type="checkbox" value="forever" id="rememberme" name="rememberme"> Remember me </label>
+                                    <label class="inline" for="rememberme"><input type="checkbox" value="forever" id="rememberme" name="rememberme"> Nhớ mật khẩu</label>
                                 </p>
                                 <p class="lost_password">
-                                    <a href="#">Lost your password?</a>
+                                    <a href="#">Quên mật khẩu?</a>
                                 </p>
 
                                 <div class="clear"></div>
                             </form>
 
-                            <div class="woocommerce-info">Have a coupon? <a class="showcoupon" data-toggle="collapse" href="#coupon-collapse-wrap" aria-expanded="false" aria-controls="coupon-collapse-wrap">Click here to enter your code</a>
+                            <div class="woocommerce-info">Có mã giảm giá<a class="showcoupon" data-toggle="collapse" href="#coupon-collapse-wrap" aria-expanded="false" aria-controls="coupon-collapse-wrap">Nhập mã giảm giá ở đây</a>
                             </div>
 
                             <form id="coupon-collapse-wrap" method="post" class="checkout_coupon collapse">
 
                                 <p class="form-row form-row-first">
-                                    <input type="text" value="" id="coupon_code" placeholder="Coupon code" class="input-text" name="coupon_code">
+                                    <input type="text" value="" id="coupon_code" placeholder="Mã giảm giá" class="input-text" name="coupon_code">
                                 </p>
 
                                 <p class="form-row form-row-last">
@@ -249,12 +249,12 @@
                                 <div id="customer_details" class="col2-set">
                                     <div class="col-1">
                                         <div class="woocommerce-billing-fields">
-                                            <h3>Billing Details</h3>
+                                            <h3>Thông tin đơn hàng</h3>
                                             <p id="billing_country_field" class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
-                                                <label class="" for="billing_country">Country <abbr title="required" class="required">*</abbr>
+                                                <label class="" for="billing_country">Quốc gia <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <select class="country_to_state country_select" id="billing_country" name="billing_country">
-                                                    <option value="">Select a country…</option>
+                                                    <option value="">Hãy chọn một quốc gia</option>
                                                     <option value="AX">Åland Islands</option>
                                                     <option value="AF">Afghanistan</option>
                                                     <option value="AL">Albania</option>
@@ -555,7 +555,7 @@
                                             </p>
 
                                             <p id="billing_phone_field" class="form-row form-row-last validate-required validate-phone">
-                                                <label class="" for="billing_phone">Phone <abbr title="required" class="required">*</abbr>
+                                                <label class="" for="billing_phone">Điện thoại <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="text" value="" placeholder="" id="billing_phone" name="billing_phone" class="input-text ">
                                             </p>
@@ -563,9 +563,9 @@
 
 
                                             <div class="create-account">
-                                                <p>Đăng ký ở bên dưới . Nếu bạn đã có tài khoản hãy đăng nhập ở bên trên</p>
+                                                <p>Nhập mật khẩu và hoàn tất đăng ký . Nếu bạn đã có tài khoản hãy đăng nhập ở bên trên</p>
                                                 <p id="account_password_field" class="form-row validate-required">
-                                                    <label class="" for="account_password">Account password <abbr title="required" class="required">*</abbr>
+                                                    <label class="" for="account_password">Mật khẩu tài khoản <abbr title="required" class="required">*</abbr>
                                                     </label>
                                                     <input type="password" value="" placeholder="Password" id="account_password" name="account_password" class="input-text">
                                                 </p>
@@ -578,7 +578,7 @@
                                     <div class="col-2">
                                         <div class="woocommerce-shipping-fields">
                                             <h3 id="ship-to-different-address">
-                        <label class="checkbox" for="ship-to-different-address-checkbox">Ship to a different address?</label>
+                        <label class="checkbox" for="ship-to-different-address-checkbox">Giao hàng ở địa chỉ khác</label>
                         <input type="checkbox" value="1" name="ship_to_different_address" checked="checked" class="input-checkbox" id="ship-to-different-address-checkbox">
                         </h3>
                                             <div class="shipping_address" style="display: block;">
@@ -873,7 +873,7 @@
                                                     <input type="text" id="shipping_state" name="shipping_state" placeholder="State / County" value="" class="input-text ">
                                                 </p>
                                                 <p id="shipping_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
-                                                    <label class="" for="shipping_postcode">Postcode <abbr title="required" class="required">*</abbr>
+                                                    <label class="" for="shipping_postcode">Mã bưu điện <abbr title="required" class="required">*</abbr>
                                                     </label>
                                                     <input type="text" value="" placeholder="Postcode / Zip" id="shipping_postcode" name="shipping_postcode" class="input-text ">
                                                 </p>
@@ -899,7 +899,7 @@
 
                                 </div>
 
-                                <h3 id="order_review_heading">Your order</h3>
+                                <h3 id="order_review_heading">Đơn đặt hàng của bạn</h3>
 
                                 <div id="order_review" style="position: relative;">
                                     <table class="shop_table">
@@ -912,7 +912,7 @@
                                         <tbody>
                                             <tr class="cart_item">
                                                 <td class="product-name">
-                                                    Ship Your Idea <strong class="product-quantity">× 1</strong> </td>
+                                                   Số lượng <strong class="product-quantity">× 1</strong> </td>
                                                 <td class="product-total">
                                                     <span class="amount">£15.00</span> </td>
                                             </tr>
@@ -920,23 +920,23 @@
                                         <tfoot>
 
                                             <tr class="cart-subtotal">
-                                                <th>Cart Subtotal</th>
+                                                <th>Tổng cộng đơn giá</th>
                                                 <td><span class="amount">£15.00</span>
                                                 </td>
                                             </tr>
 
                                             <tr class="shipping">
-                                                <th>Shipping and Handling</th>
+                                                <th>Giao và nhận hàng</th>
                                                 <td>
 
-                                                    Free Shipping
+                                                    Miễn phí giao hàng
                                                     <input type="hidden" class="shipping_method" value="free_shipping" id="shipping_method_0" data-index="0" name="shipping_method[0]">
                                                 </td>
                                             </tr>
 
 
                                             <tr class="order-total">
-                                                <th>Order Total</th>
+                                                <th>Đơn giá cuối</th>
                                                 <td><strong><span class="amount">£15.00</span></strong> </td>
                                             </tr>
 
@@ -948,16 +948,16 @@
                                         <ul class="payment_methods methods">
                                             <li class="payment_method_bacs">
                                                 <input type="radio" data-order_button_text="" checked="checked" value="bacs" name="payment_method" class="input-radio" id="payment_method_bacs">
-                                                <label for="payment_method_bacs">Direct Bank Transfer </label>
+                                                <label for="payment_method_bacs">Chuyển khoảng trực tiếp</label>
                                                 <div class="payment_box payment_method_bacs">
-                                                    <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                                    <p>Chuyển khoảng trực tiếp. Hãy sử dụng thẻ ngân hàng của bạn . Đơn hàng của bạn sẽ không được giao nếu chúng tôi chưa nhận được chuyển kho.</p>
                                                 </div>
                                             </li>
                                             <li class="payment_method_cheque">
                                                 <input type="radio" data-order_button_text="" value="cheque" name="payment_method" class="input-radio" id="payment_method_cheque">
-                                                <label for="payment_method_cheque">Cheque Payment </label>
+                                                <label for="payment_method_cheque">Thanh toán séc </label>
                                                 <div style="display:none;" class="payment_box payment_method_cheque">
-                                                    <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                    <p>Hãy gửi séc của bạn tới chi nhánh công ty để đặt hàng</p>
                                                 </div>
                                             </li>
                                             <li class="payment_method_paypal">
@@ -965,7 +965,7 @@
                                                 <label for="payment_method_paypal">PayPal <img alt="PayPal Acceptance Mark" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png"><a title="What is PayPal?" onclick="javascript:window.open('https://www.paypal.com/gb/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;" class="about_paypal" href="https://www.paypal.com/gb/webapps/mpp/paypal-popup">What is PayPal?</a>
                                                 </label>
                                                 <div style="display:none;" class="payment_box payment_method_paypal">
-                                                    <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+                                                    <p>Thanh toán qua PayPal;Bạn cũng có thể thanh toán bằng thẻ credit nếu bạn không có PayPal.</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -997,8 +997,8 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>u<span>Stora</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <h2>E<span>gle Cat Eye</span></h2>
+                        <p>Xưởng Thượng Tín với việc nằm ở TPHCM là điều hết sức thuận lợi cho khách hàng. Bạn có thể đến trực tiếp tại xưởng để bàn bạc và kiểm tra chất liệu vải, mẫu.Với kinh nghiệm lâu năm trong nghề. Chúng tôi sẽ mang đến cho bạn những chiếc áo khoác quảng cáo có giá tốt nhất.</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -1051,7 +1051,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2015 thương mại điện tử .Đã đăng ký bản quyền <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
                 
