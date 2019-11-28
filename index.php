@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+    <script src="index.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -94,7 +94,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.php">Giỏ - <span class="cart-amunt">50 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart.php">Giỏ - <span class="cart-amunt"></span> <i class="fa fa-shopping-cart"></i> <span class="product-count">0</span></a>
                     </div>
                 </div>
             </div>

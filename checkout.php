@@ -29,7 +29,7 @@ include("./connect.php");
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+    <script src="checkout.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -900,24 +900,21 @@ include("./connect.php");
                                                 <th class="product-total">Tổng cộng</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id ="giohang">
                                             <tr class="cart_item">
-                                                <td class="product-name">
-                                                    Ship Your Idea <strong class="product-quantity">× 1</strong> </td>
-                                                <td class="product-total">
-                                                    <span class="amount">£15.00</span> </td>
+                                                
                                             </tr>
                                         </tbody>
                                         <tfoot>
 
                                             <tr class="cart-subtotal">
-                                                <th>Cart Subtotal</th>
-                                                <td><span class="amount">£15.00</span>
+                                                <th>Giá trị đơn hàng:</th>
+                                                <td><span class="Totalamount">£15.00</span>
                                                 </td>
                                             </tr>
 
                                             <tr class="shipping">
-                                                <th>Shipping and Handling</th>
+                                                <th>Phí Vận Chuyển:</th>
                                                 <td>
 
                                                     Free Shipping
@@ -927,8 +924,8 @@ include("./connect.php");
 
 
                                             <tr class="order-total">
-                                                <th>Order Total</th>
-                                                <td><strong><span class="amount">£15.00</span></strong> </td>
+                                                <th>Tổng cộng:</th>
+                                                <td><strong><span class="Orderamount">£15.00</span></strong> </td>
                                             </tr>
 
                                         </tfoot>

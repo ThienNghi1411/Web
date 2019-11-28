@@ -7,7 +7,7 @@ if (document.readyState == 'loading') {
 function ready()
 {
 
-	var addToCartButtons = document.getElementsByClassName('add_to_cart_button')
+    var addToCartButtons = document.getElementsByClassName('add_to_cart_button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
@@ -40,6 +40,7 @@ function addToCartClicked(event) {
             return;
         }
     }
+    alert("Sản phẩm bạn chọn đã được thêm vào giỏ hàng!")
     json_obj.quantity = quantity_input;
     jsondata.push(json_obj);
     console.log(jsondata)
