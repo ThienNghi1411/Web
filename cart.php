@@ -243,7 +243,7 @@ include("./connect.php");
                                             <span class="price"><span class="amount">$<?php echo number_format($row['price'])?></span></span>
                                         </a>
 
-                                        <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="22" rel="nofollow" href="single-product.php?id=<?php echo $row['id']?>">Select options</a>
+                                        <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="22" rel="nofollow" href="single-product.php?id=<?php echo $row['id']?>">Chi tiết sảm phẩm</a>
                                     </li>
 
                                     <?php }
