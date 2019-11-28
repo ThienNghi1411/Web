@@ -257,11 +257,11 @@ if (isset($_GET['id'])) {
                                                         <p>Your rating</p>
 
                                                         <div class="rating-wrap-post">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
+                                                            <i data-item="0" class="fa fa-star"></i>
+                                                            <i data-item="1" class="fa fa-star"></i>
+                                                            <i data-item="2" class="fa fa-star"></i>
+                                                            <i data-item="3" class="fa fa-star"></i>
+                                                            <i data-item="4" class="fa fa-star"></i>
                                                         </div>
                                                     </div>
                                                     <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>

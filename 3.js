@@ -74,10 +74,9 @@ $(document).ready(function() {
                     name: $(this).val()
                 },
                 success: function(data) {
-                    
+            
                     let list = JSON.parse(data);
-                   
-                   
+
                     if (list != "") {
                         
                         $('#h2search').html("");
@@ -96,6 +95,26 @@ $(document).ready(function() {
         }
 
     })
+    
+
+    $(".rating-wrap-post .fa.fa-star").hover(function () {
+            let a = $(this).attr("data-item");
+            $(".fa.fa-star").each(function() {  
+               
+                $(this).css("color","yellow");
+                if(  $(this).attr("data-item") > a )  $(this).css("color","white");  
+            
+            })
+            
+        }, function () {
+           
+          
+        }
+    );
+
+ 
+      
+   
 
 
 
