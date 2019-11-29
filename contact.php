@@ -137,13 +137,13 @@ if (isset($_GET["name"])) {
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Trang chủ</a></li>
-                        <li class="active"><a href="shop.php?trang=1">Cửa hàng</a></li>
+                        <li ><a href="shop.php?trang=1">Cửa hàng</a></li>
                        
-                        <li><a href="cart.php">Giỏ hàng</a></li>
+                        <li  ><a  href="cart.php">Giỏ hàng</a></li>
                        
                     
                       
-                        <li><a href="contact.php">Liên hệ</a></li>
+                        <li class="active"><a href="contact.php">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>

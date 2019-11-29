@@ -142,7 +142,7 @@
 							<a class="caption button-radius" href="#"><span class="icon"></span>Mua Ngay</a>
 						</div>
 					</li>
-					<li><img src="img/ao2.jpg" alt="Slide" width="1163px">
+					<li><img src="img/ao2.jpg" alt="Slide" width="500px">
 						<div class="caption-group">
 							<h2 class="caption title">
 								Mua một,tặng một <span class="primary"> giảm 50% <strong>off</strong></span>
