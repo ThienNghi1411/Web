@@ -6,9 +6,6 @@ if (document.readyState == 'loading') {
 
 function ready()
 {
-    
-    
-    UpdateCartHeader()
 	// xoa item trong cart
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
 	var removecart = document.getElementsByClassName("remove");
@@ -30,7 +27,7 @@ function ready()
     nameItem.forEach(function(value) {
         addItemToCart(value.name, value.price, value.image,value.quantity);
     })
-    
+    UpdateCartHeader()
 
 }
 var check = false;
@@ -45,6 +42,7 @@ function CheckCoupon(event)
         alert("Đơn hàng của bạn được giảm giá 500000vnd!")    
         check = true;
         UpdateCart();
+        UpdateCartHeader()
     }
     else
     {
@@ -123,7 +121,6 @@ function UpdateCart()
     }
     sessionStorage.setItem("total",LastTotal);
     UpdateCartHeader()
-    
 }
 
 function UpdateQuantity(event)

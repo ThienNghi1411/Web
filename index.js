@@ -6,13 +6,12 @@ if (document.readyState == 'loading') {
 
 function ready()
 {
-    UpdateCartHeader()
 	var addToCartButtons = document.getElementsByClassName('add-to-cart-link')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
-    
+    UpdateCartHeader()
     
 }
 

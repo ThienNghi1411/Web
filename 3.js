@@ -6,7 +6,6 @@ if (document.readyState == 'loading') {
 
 function ready()
 {
-    UpdateCartHeader()
     var addToCartButtons = document.getElementsByClassName('add_to_cart_button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
@@ -17,7 +16,7 @@ function ready()
         var button = addToCartLinks[i]
         button.addEventListener('click', addToCartClicked)
     }
-
+    UpdateCartHeader()
 }
 
 function addToCartClicked(event) {
@@ -51,7 +50,7 @@ function addToCartClicked(event) {
 }
 function UpdateCartHeader()
 {
-    vvar nameItem = JSON.parse(sessionStorage.getItem('name')) ;
+    var nameItem = JSON.parse(sessionStorage.getItem('name')) 
     var x = 0
     var total = 0
     nameItem.forEach(function(value) {
