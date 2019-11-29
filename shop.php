@@ -247,7 +247,7 @@ if (isset($_GET["name"])) {
 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title" style="font-weight: bold;">Điều hướng người dùng </h2>
+                        <h2 class="footer-wid-title">Điều hướng người dùng </h2>
                         <ul>
                             <li><a href="">Tài khoản người dùng</a></li>
                             <li><a href="">Lịch sử đặt hàng</a></li>
