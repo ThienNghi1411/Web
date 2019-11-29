@@ -196,7 +196,7 @@ if (isset($_GET["name"])) {
                             <p><label for="email">Gmail</label> <input id="ipreviewemail" name="email" type="email"></p>
                         
                             <p><label for="review">Nhận xét của bạn</label> <textarea id="txtreview" name="review" cols="30" rows="10"></textarea></p>
-                            <p><input id="submitreview" type="submit" value="Submit"></p>
+                            <p><input id="submitreview" type="submit" value="Gửi"></p>
                         </div>
                     </div>
                 </div>
