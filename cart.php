@@ -166,7 +166,7 @@ include("./connect.php");
                                 while ($row = mysqli_fetch_assoc($result)) {
                         ?>
                         <div class="thubmnail-recent">
-                            <img src=<?php echo $row['image']?> class="recent-thumb" alt="">
+                            <img src=<?php echo $row['image']?> class="recent-thumb" alt="" data-item='<?php echo json_encode($row)?>'>
                             <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$<?php echo number_format($row['price'])?></ins> <del>$<?php echo number_format($row['price2'])?></del>
