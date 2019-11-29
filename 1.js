@@ -31,6 +31,12 @@ function ready()
         var Dragplace = Drager[i];
         Dragplace.addEventListener('dragstart',dragev)
     }
+    var a = document.getElementsByClassName('thubmnail-recent img');
+    for (var i =  0 ; i < a.length ; i++)
+    {
+        var Dragplace = a[i];
+        Dragplace.addEventListener('dragstart',dragev)
+    }
     var Droper = document.getElementById("giohang1");
     Droper.addEventListener('drop',dropev)
     Droper.addEventListener('dragover',allowDrop)
@@ -39,8 +45,7 @@ function ready()
             addItemToCart(value.name, value.price, value.image,value.quantity);
         })
     }
-    
-    UpdateCartHeader()
+    UpdateCart()
 
 }
 function dragev(event)
@@ -62,7 +67,6 @@ function dropev(event)
     var data = event.dataTransfer.getData("text") // chuỗi json
     var json_obj =JSON.parse(data);
     json_obj.quantity = 1;
-    console.log(json_obj)
     let item = jsondata.find((item) => item.id === json_obj.id );
     if(item){
         alert("Sản phẩm bạn chọn đã có trong giỏ hàng!")
