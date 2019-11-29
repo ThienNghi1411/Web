@@ -6,7 +6,7 @@ if (document.readyState == 'loading') {
 
 function ready()
 {
-
+    UpdateCartHeader()
 	var addToCartButtons = document.getElementsByClassName('add_to_cart_button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
@@ -60,5 +60,14 @@ function addToCartClicked(event) {
     sessionStorage.setItem('name', JSON.stringify(jsondata))
 }
 
-
+function UpdateCartHeader()
+{
+    var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
+    var x = 0
+    nameItem.forEach(function(value) {
+        x=x+parseInt(value.quantity)
+    })
+    document.getElementsByClassName('product-count')[0].innerText = x
+    document.getElementsByClassName('cart-amunt')[0].innerText = sessionStorage.getItem('total') + "  VNĐ"
+}
 

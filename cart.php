@@ -95,7 +95,7 @@ include("./connect.php");
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                    <a href="cart.php">Giỏ hàng <span class="cart-amunt">50 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="cart.php">Giỏ hàng <span class="cart-amunt"></span> <i class="fa fa-shopping-cart"></i> <span class="product-count"></span></a>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ function ready()
 {
     
     
-    
+    UpdateCartHeader()
 	// xoa item trong cart
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
 	var removecart = document.getElementsByClassName("remove");
@@ -131,8 +131,19 @@ function UpdateQuantity(event)
 	if (isNaN(input.value) || input.value <=0)
 	{	
 		input.value = 1;  // kiem tra input co la so khong, neu la so phai >= 1
-	}
-	UpdateCart();
+    }
+    var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
+    var getname = input.parentElement.parentElement.parentElement
+    var title = getname.getElementsByClassName('cart-item-title')[0].innerText
+    nameItem.forEach(function(value) {
+        if (value.name == title)
+        {
+            value.quantity = input.value;
+            sessionStorage.setItem('name', JSON.stringify(nameItem))
+        }
+    })
+    UpdateCart();
+    UpdateCartHeader();
 }
 
 function removeCartItem(event,i)
@@ -146,7 +157,16 @@ function removeCartItem(event,i)
 	UpdateCart();
 }
 
-
+function UpdateCartHeader()
+{
+    var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
+    var x = 0
+    nameItem.forEach(function(value) {
+        x=x+parseInt(value.quantity)
+    })
+    document.getElementsByClassName('product-count')[0].innerText = x
+    document.getElementsByClassName('cart-amunt')[0].innerText = sessionStorage.getItem('total') + "  VNĐ"
+}
 $(document).ready(function() {
     $("#h2search").hide();
     $('#h2search').on("click", "p", function() {
