@@ -150,8 +150,8 @@ include("./connect.php");
                 <div class="single-sidebar">
                         <h2 class="sidebar-title">Tìm kiếm</h2>
                         <form action="shop.php" method="GET" autocomplete="off">
-                            <input id="ipSearch" name="name" type="text" placeholder="Search products...">
-                            <input type="submit" id = "Ssubmit" value="Search">
+                            <input id="ipSearch" name="name" type="text" placeholder="Tìm kiếm sản phẩm...">
+                            <input type="submit" id = "Ssubmit" value="Tìm kiếm">
                             
                         </form>
                         <div id ="h2search"></div>
@@ -165,11 +165,11 @@ include("./connect.php");
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                         ?>
-                        <div class="thubmnail-recent">
-                            <img src=<?php echo $row['image']?> class="recent-thumb" alt="" data-item='<?php echo json_encode($row)?>'>
+                        <div class="thubmnail-recent"  data-item = '<?php echo json_encode($row)?>' >
+                            <img  src=<?php echo $row['image']?> class="recent-thumb" alt="">
                             <h2><a href="single-product.php?id=<?php echo $row['id']?>"><?php echo $row['name']?></a></h2>
                             <div class="product-sidebar-price">
-                                <ins>$<?php echo number_format($row['price'])?></ins> <del>$<?php echo number_format($row['price2'])?></del>
+                                 <ins><?php echo number_format($row['price']) ?> VND</ins> <del><?php echo number_format($row['price2']) ?> VND</del>
                             </div>
                         </div>
                             <?php }
@@ -231,7 +231,8 @@ include("./connect.php");
                                         <a href="single-product.php?id=<?php echo $row['id']?> " data-item = '<?php echo json_encode($row)?>'>
                                             <img  width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
                                             <h3>Gửi ý tưởng của bạn</h3>
-                                            <span class="price"><span class="amount">$<?php echo number_format($row['price'])?></span></span>
+                                            <span class="price"><span class="amount"><?php echo number_format($row['price'])?> VND</span></span>
+                                            
                                         </a>
 
                                         <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="22" rel="nofollow" href="single-product.php?id=<?php echo $row['id']?>">Chi tiết sảm phẩm</a>

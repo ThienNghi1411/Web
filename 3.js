@@ -86,14 +86,23 @@ $(document).ready(function() {
                     name: $(this).val()
                 },
                 success: function(data) {
-            
+                    
                     let list = JSON.parse(data);
-
+                   
+                   
                     if (list != "") {
                         
                         $('#h2search').html("");
                         list.forEach(function(value) {
-                            $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
+                            $('#h2search').append(`  
+                                <div class="thubmnail-recent"">
+                                    <img src="${value.image}" class="recent-thumb" alt="">
+                                    <h2><a href="single-product.php?id=${value.id}">${value.name}</a></h2>
+                                    <div class="product-sidebar-price">
+                                        <ins>${value.price}  VND</ins> <del></ins> <del> ${value.price2} VND</del>
+                                    </div>
+                                </div>`
+                            );
 
                         })
                     }else{
@@ -119,8 +128,7 @@ $(document).ready(function() {
                 $(this).addClass("active_star");
             }
         })
-    }
-);
+    });
 
     var index = 0;
     // đánh giá sao

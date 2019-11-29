@@ -114,12 +114,12 @@ include("./connect.php");
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Trang chủ</a></li>
                         <li><a href="shop.php">Cửa hàng</a></li>
-                        <li><a href="single-product.php?id=1">Chi tiết sản phẩm</a></li>
+                        
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li class ="active"><a href="checkout.php">Kiểm tra</a></li>
                       
-                        <li><a href="#">Khác</a></li>
-                        <li><a href="#">Liên hệ</a></li>
+                        
+                        <li><a href="contact.php">Liên hệ</a></li>
                     </ul>
                 </div>  
             </div>

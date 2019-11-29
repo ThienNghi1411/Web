@@ -60,7 +60,7 @@ if (isset($_GET['id'])) {
                             <li><a href="#"><i class="fa fa-heart"></i> Danh sách</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ if (isset($_GET['id'])) {
                         <li><a href="shop.php?trang=1">Cửa hàng</a></li>
                         <li class="active"><a href="single-product.php?id=1">Chi tiết</a></li>
                         <li><a href="cart.php">Giỏ hàng</a></li>
-                        <li><a href="checkout.php">Kiểm tra</a></li>
+                       
                      
                      
                         <li><a href="contact.php">Liên hệ</a></li>
@@ -196,7 +196,7 @@ if (isset($_GET['id'])) {
                         <div class="product-breadcroumb">
                             <a href="">Trang chủ</a>
                             <a href="">Phân loại</a>
-                            <a href="">Sony Smart TV - 2015</a>
+                            
                         </div>
 
 
@@ -215,7 +215,7 @@ if (isset($_GET['id'])) {
                                 <div class="product-inner">
                                     <h2 class="product-name"><?php echo $coc['name'] ?></h2>
                                     <div class="product-inner-price">
-                                        <ins><?php echo $coc['price'] ?> VND</ins> <del><?php echo $coc['price2'] ?> VND</del>
+                                        <ins><?php echo number_format($coc['price']) ?> VND</ins> <del><?php echo number_format($coc['price2']) ?> VND</del>
                                     </div>
 
                                     <form action="" class="cart">

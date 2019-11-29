@@ -54,11 +54,12 @@ function addToCartClicked(event) {
     }
 
     
-    console.log(jsondata)
-    JSON.stringify(jsondata);
     
+    JSON.stringify(jsondata);
+    alert("Thêm sản phẩm thành công ");
     sessionStorage.setItem('name', JSON.stringify(jsondata))
     UpdateCartHeader()
+   
 }
 
 function UpdateCartHeader()

@@ -218,6 +218,7 @@ div.coupon input[type="text"] {
   top: 103px;
   box-shadow: 1px 5px 6px 0px;
   padding: 10px;
+  width: 358px;
 }
 #h2search a {
   border-bottom: 1px solid #eee;

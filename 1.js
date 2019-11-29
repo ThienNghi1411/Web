@@ -31,7 +31,7 @@ function ready()
         var Dragplace = Drager[i];
         Dragplace.addEventListener('dragstart',dragev)
     }
-    var a = document.getElementsByClassName('thubmnail-recent img');
+    var a = document.getElementsByClassName('recent-thumb');
     for (var i =  0 ; i < a.length ; i++)
     {
         var Dragplace = a[i];
@@ -49,7 +49,8 @@ function ready()
 
 }
 function dragev(event)
-{
+{   
+   
     var x = event.target
     var data = x.parentElement.getAttribute("data-item")
     event.dataTransfer.setData("text",data)
@@ -105,6 +106,7 @@ function CheckCoupon(event)
     }
     
 }
+
 function addItemToCart(title, price, imageSrc, Quantity) 
 {
     var cartRow = document.createElement('TR')
@@ -124,19 +126,19 @@ function addItemToCart(title, price, imageSrc, Quantity)
                 <a href="single-product.html" class="cart-item-title">${title}</a> 
             </td>
 
-            <td class="product-price">
+            <td class="product-price" >
                 <span class="product-price-item">${price}</span> 
             </td>
 
-            <td class="product-quantity" width=150px>
+            <td class="product-quantity" >
                 <div class="quantity buttons_added">
-                    <input type="button" class="minus" value="-" >
-                    <input type="number" size="4" class="input-text qty text" title="Qty" value="${Quantity}"  step="1">
-                    <input type="button" class="plus" value="+" >
+                    
+                    <input type="number" width=150px size="4" class="input-text qty text" title="Qty" value="${Quantity}"  step="1">
+                  
                 </div>
             </td>
 
-            <td class="product-subtotal">
+            <td class="product-subtotal" width=150px>
                 <span class="totalamount">${price}</span> 
             </td>`
     cartRow.innerHTML = cartRowContents;
@@ -258,7 +260,14 @@ $(document).ready(function() {
                         
                         $('#h2search').html("");
                         list.forEach(function(value) {
-                            $('#h2search').append(`<a href="single-product.php?id=${value.id}">${value.name}</a>`);
+                            $('#h2search').append(`  
+                        <div class="thubmnail-recent">
+                            <img src="${value.image}" class="recent-thumb" alt="">
+                            <h2><a href="single-product.php?id=${value.id}">${value.name}</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>${value.price}  VND</ins> <del></ins> <del> ${value.price2} VND</del>
+                            </div>
+                        </div>`);
 
                         })
                     }else{
