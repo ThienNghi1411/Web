@@ -24,7 +24,7 @@ function addToCartClicked(event) {
          jsondata = [];
     }
     var button = event.target;
-
+    
 
     var data = button.getAttribute("data-item") ;// chuỗi json 
     let index = 1 ;

@@ -185,7 +185,7 @@ include("./connect.php");
                         <div class="woocommerce">
                             <form method="post" action="checkout.php">
                                 <table cellspacing="0" class="shop_table cart">
-                                    <thead>
+                                    <thead id="giohang1">
                                         <tr>
                                             <th class="product-remove">&nbsp;</th>
                                             <th class="product-thumbnail">&nbsp;</th>
@@ -229,7 +229,7 @@ include("./connect.php");
                                 ?>
                                     <li class="product">
                                         <a href="single-product.php?id=<?php echo $row['id']?> " data-item = '<?php echo json_encode($row)?>'>
-                                            <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
+                                            <img  width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
                                             <h3>Gửi ý tưởng của bạn</h3>
                                             <span class="price"><span class="amount">$<?php echo number_format($row['price'])?></span></span>
                                         </a>

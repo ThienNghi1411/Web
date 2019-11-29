@@ -23,12 +23,60 @@ function ready()
 	{
 		var input = getQuantity[i];
 		input.addEventListener('change',UpdateQuantity);
-	}
+    }
+    //dragdrop
+    var Drager = document.getElementsByClassName('attachment-shop_catalog wp-post-image')
+    for (var i =  0 ; i < Drager.length ; i++)
+    {
+        var Dragplace = Drager[i];
+        Dragplace.addEventListener('dragstart',dragev)
+    }
+    var Droper = document.getElementById("giohang1");
+    Droper.addEventListener('drop',dropev)
+    Droper.addEventListener('dragover',allowDrop)
     nameItem.forEach(function(value) {
         addItemToCart(value.name, value.price, value.image,value.quantity);
     })
     UpdateCartHeader()
 
+}
+function dragev(event)
+{
+    var x = event.target
+    var data = x.parentElement.getAttribute("data-item")
+    event.dataTransfer.setData("text",data)
+    
+}
+function dropev(event)
+{
+    event.preventDefault();
+    var jsondata = [];
+    if(sessionStorage.getItem('name')){
+         jsondata =JSON.parse(sessionStorage.getItem('name'));
+    }else{
+         jsondata = [];
+    }
+    var data = event.dataTransfer.getData("text") // chuỗi json
+    var json_obj =JSON.parse(data);
+    json_obj.quantity = 1;
+    console.log(json_obj)
+    let item = jsondata.find((item) => item.id === json_obj.id );
+    if(item){
+        alert("Sản phẩm bạn chọn đã có trong giỏ hàng!")
+        return;
+    }else{
+        json_obj.quantity=1;
+        addItemToCart(json_obj.name, json_obj.price, json_obj.image,json_obj.quantity);
+        jsondata.push(json_obj);
+       
+    }
+    JSON.stringify(jsondata);
+    sessionStorage.setItem('name', JSON.stringify(jsondata))
+    UpdateCartHeader()
+}
+function allowDrop(event)
+{
+    event.preventDefault();
 }
 var check = false;
 function CheckCoupon(event)
