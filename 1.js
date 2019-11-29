@@ -34,10 +34,13 @@ function ready()
     var Droper = document.getElementById("giohang1");
     Droper.addEventListener('drop',dropev)
     Droper.addEventListener('dragover',allowDrop)
-    nameItem.forEach(function(value) {
-        addItemToCart(value.name, value.price, value.image,value.quantity);
-    })
-    UpdateCartHeader()
+    if (nameItem!= null)
+    {
+        nameItem.forEach(function(value) {
+            addItemToCart(value.name, value.price, value.image,value.quantity);
+        })
+    }
+    UpdateCart()
 
 }
 function dragev(event)
@@ -59,7 +62,6 @@ function dropev(event)
     var data = event.dataTransfer.getData("text") // chuỗi json
     var json_obj =JSON.parse(data);
     json_obj.quantity = 1;
-    console.log(json_obj)
     let item = jsondata.find((item) => item.id === json_obj.id );
     if(item){
         alert("Sản phẩm bạn chọn đã có trong giỏ hàng!")
@@ -208,10 +210,13 @@ function UpdateCartHeader()
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
     var x = 0
     var total = 0
-    nameItem.forEach(function(value) {
-        x=x+parseInt(value.quantity)
-        total = total+ (value.price * value.quantity)
-    })
+    if (nameItem!=null)
+    {
+        nameItem.forEach(function(value) {
+            x=x+parseInt(value.quantity)
+            total = total+ (value.price * value.quantity)
+        })
+    }
     document.getElementsByClassName('product-count')[0].innerText = x
     document.getElementsByClassName('cart-amunt')[0].innerText = total + "  VNĐ"
 }
