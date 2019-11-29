@@ -46,7 +46,7 @@ function addToCartClicked(event) {
     
     
     if(item){
-        item.quantity =item.quantity+1;
+        item.quantity =parseInt(item.quantity)+1;
     }else{
         json_obj.quantity=1;
         jsondata.push(json_obj);
@@ -58,6 +58,7 @@ function addToCartClicked(event) {
     JSON.stringify(jsondata);
     
     sessionStorage.setItem('name', JSON.stringify(jsondata))
+    UpdateCartHeader()
 }
 
 function UpdateCartHeader()

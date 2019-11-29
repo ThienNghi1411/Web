@@ -122,6 +122,7 @@ function UpdateCart()
         document.getElementsByClassName('Subtotal-amount')[0].innerText = LastTotal + " vnd"
     }
     sessionStorage.setItem("total",LastTotal);
+    UpdateCartHeader()
     
 }
 
