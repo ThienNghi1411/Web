@@ -34,9 +34,12 @@ function ready()
     var Droper = document.getElementById("giohang1");
     Droper.addEventListener('drop',dropev)
     Droper.addEventListener('dragover',allowDrop)
-    nameItem.forEach(function(value) {
-        addItemToCart(value.name, value.price, value.image,value.quantity);
-    })
+    if(nameItem != null){
+        nameItem.forEach(function(value) {
+            addItemToCart(value.name, value.price, value.image,value.quantity);
+        })
+    }
+    
     UpdateCartHeader()
 
 }
@@ -208,6 +211,7 @@ function UpdateCartHeader()
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
     var x = 0
     var total = 0
+    if(nameItem != null)
     nameItem.forEach(function(value) {
         x=x+parseInt(value.quantity)
         total = total+ (value.price * value.quantity)
