@@ -148,7 +148,7 @@ if (isset($_GET["name"])) {
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Cửa hàng</h2>
+                        <h2 style="font-weight: bold;">Cửa hàng</h2>
                     </div>
                 </div>
             </div>
