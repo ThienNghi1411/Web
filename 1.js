@@ -162,11 +162,13 @@ function UpdateCartHeader()
 {
     var nameItem = JSON.parse(sessionStorage.getItem('name')) ;
     var x = 0
+    var total = 0
     nameItem.forEach(function(value) {
         x=x+parseInt(value.quantity)
+        total = total+ (value.price * value.quantity)
     })
     document.getElementsByClassName('product-count')[0].innerText = x
-    document.getElementsByClassName('cart-amunt')[0].innerText = sessionStorage.getItem('total') + "  VNĐ"
+    document.getElementsByClassName('cart-amunt')[0].innerText = total + "  VNĐ"
 }
 $(document).ready(function() {
     $("#h2search").hide();
