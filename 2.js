@@ -6,6 +6,7 @@ if (document.readyState == 'loading') {
 
 function ready()
 {
+   
 	var addToCartButtons = document.getElementsByClassName('add_to_cart_button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]

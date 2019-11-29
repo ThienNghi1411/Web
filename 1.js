@@ -167,6 +167,8 @@ function UpdateCartHeader()
     document.getElementsByClassName('product-count')[0].innerText = x
     document.getElementsByClassName('cart-amunt')[0].innerText = total + "  VNĐ"
 }
+
+
 $(document).ready(function() {
     $("#h2search").hide();
     $('#h2search').on("click", "p", function() {
