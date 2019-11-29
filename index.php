@@ -47,7 +47,7 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>
+                          
                          
                             <li><a href="cart.php"><i class="fa fa-user"></i>Giỏ hàng</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
@@ -402,11 +402,9 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
                         <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            <li><a href="#">Home accesseries</a></li>
-                            <li><a href="#">LED TV</a></li>
-                            <li><a href="#">Computer</a></li>
-                            <li><a href="#">Gadets</a></li>
+                        <li><a href="shop.php?name=Áo khoác">Áo khoác</a></li>
+                            <li><a href="shop.php?name=Áo thun">Áo thun</a></li>
+                            <li><a href="shop.php?name=Giày">Giày</a></li>
                         </ul>                        
                     </div>
                 </div>

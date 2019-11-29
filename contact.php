@@ -69,7 +69,7 @@ if (isset($_GET["name"])) {
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
+                           
                             <li><a href="#"><i class="fa fa-heart"></i> Danh sách sản phẩm</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
@@ -165,17 +165,44 @@ if (isset($_GET["name"])) {
 
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
+
         <div class="container">
-        <div role="tabpanel" class="tab-pane fade active in" id="profile">
-                <div class="submit-review">
-                    <p><label for="name">Tên</label> <input id="ipreviewname" name="name" type="text"></p>
-                    <p><label for="email">Gmail</label> <input id="ipreviewemail" name="email" type="email"></p>
-                   
-                    <p><label for="review">Nhận xét của bạn</label> <textarea id="txtreview" name="review" cols="30" rows="10"></textarea></p>
-                    <p><input id="submitreview" type="submit" value="Submit"></p>
+            <div id = "contact">
+                <div style="width: 50%">
+                    <p ><b style="font-size:82px;color:blue">Eagle cat eye</b> </p>
+                    <table cellspacing="0" style="font-size:30px">
+                        
+                        <tr>
+                            <td><b>Địa chỉ liên hệ:</b> 280 An Dương Vương, Quận 5; Thành phố Hồ Chí Minh, Việt Nam</td>
+                            
+                        </tr>
+                        <tr>
+                            <td> <b>Số điện thoại:</b>0964443332</td>
+                           
+                        
+                        </tr>
+                        <tr>
+                            <td><b>Email:</b> concockun@gmail.com</td>
+                            
+                        </tr>
+                                        
+                    </table>
+                </div>
+
+                <div style="width: 50%">
+                    <div role="tabpanel" class="tab-pane fade active in" id="profile">
+                        <div class="submit-review">
+                            <p><label for="name">Tên</label> <input id="ipreviewname" name="name" type="text"></p>
+                            <p><label for="email">Gmail</label> <input id="ipreviewemail" name="email" type="email"></p>
+                        
+                            <p><label for="review">Nhận xét của bạn</label> <textarea id="txtreview" name="review" cols="30" rows="10"></textarea></p>
+                            <p><input id="submitreview" type="submit" value="Submit"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+       
     </div>
 <script>
   $("#submitreview").click(function  (){

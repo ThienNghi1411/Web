@@ -43,13 +43,20 @@ if (isset($_GET["name"])) {
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="jquery.js"></script>
-    <script src="2.js"></script
+    <script src="2.js">
+        < /script
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <
+        !--HTML5 shim and Respond.js
+        for IE8 support of HTML5 elements and media queries-- >
+            <
+            !--WARNING: Respond.js doesn 't work if you view the page via file:// --> <!--[
+                if lt IE 9
+            ] >
+            <
+            script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" >
+    </script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -147,9 +154,7 @@ if (isset($_GET["name"])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="product-bit-title text-center">
-                        <h2>Cửa hàng</h2>
-                    </div>
+                  
                 </div>
             </div>
         </div>
@@ -159,71 +164,21 @@ if (isset($_GET["name"])) {
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
-            <div class="row coc">
+                    <div class="dangnhap">
+                        <h2>Đăng nhập</h2>
+                        <form action="#" method="GET" autocomplete="off">
+                            <input id="ipUser" name= "user" type="text" placeholder="Tài khoản"> <br>
+                            <input id="ipPassword" name= "password" type="password" placeholder="Mật khẩu"> <br>
+                            <div>
+                            <input type="submit" id="dnSM" value="Đăng nhập">
+                            <input type="submit" id="dkSM" value="Đăng ký">
 
-                <?php
-                $index = ($trang - 1) * $productrang;
-                $sqlSelect = "SELECT * FROM sanpham WHERE name LIKE '%$name%' LIMIT $index ,$productrang";
-                $result = mysqli_query($conn, $sqlSelect);
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-
-
-                        //echo $row['description'];
-
-                        ?>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="single-shop-product">
-                                <div class="product-upper">
-                                    <img class="size" src=<?php echo $row['image'] ?> alt="">
-                                </div>
-                                <h2><a href="single-product.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></h2>
-                                <div class="product-carousel-price">
-                                    <ins><?php echo number_format($row['price'])?> VND</ins> <del>$<?php echo number_format($row['price2'])?> VND</del>
-                                </div>
-
-                                <div class="product-option-shop">
-                                    <a data-item='<?php echo json_encode($row)?>' class="add_to_cart_button" data-quantity="1" data-product_sku="" rel="nofollow" href="shop.php" >Add to cart</a>
-                                </div>
                             </div>
-                        </div>
-                <?php }
-                }
-                ?>
-
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-pagination text-center">
-                        <nav>
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <?php
-                                $coc = mysqli_query($conn, "SELECT * FROM sanpham");
-                                $tongproduct = mysqli_num_rows($coc);
-                                $sotrang = ceil($tongproduct / $productrang);
-                                for ($i = 1; $i <= $sotrang; ++$i) {
-
-                                ?>
-                                    <li><a href="shop.php?trang=<?php echo $i?>&name=<?php echo $name?>"><?php echo $i ?></a></li>
-                                <?php } ?>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                            
+                        </form>
+                       
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 
@@ -262,9 +217,9 @@ if (isset($_GET["name"])) {
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Phân loại</h2>
                         <ul>
-                            <li><a href="shop.php?name=Áo khoác">Áo khoác</a></li>
-                            <li><a href="shop.php?name=Áo thun">Áo thun</a></li>
-                            <li><a href="shop.php?name=Giày">Giày</a></li>
+                            <li><a href="">Áo khoác</a></li>
+                            <li><a href="">Áo thun</a></li>
+                            <li><a href="">Giày</a></li>
 
                         </ul>
                     </div>

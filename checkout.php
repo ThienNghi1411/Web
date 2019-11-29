@@ -45,7 +45,7 @@ include("./connect.php");
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                              <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
+                        
                             <li><a href="#"><i class="fa fa-heart"></i> Danh sách sản phẩm</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>

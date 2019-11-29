@@ -48,7 +48,7 @@ include("./connect.php");
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                        <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
+                     
                             <li><a href="#"><i class="fa fa-heart"></i> Danh sách sản phẩm</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
@@ -177,16 +177,7 @@ include("./connect.php");
                             ?>
                     </div>
                     
-                    <div class="single-sidebar">
-                        <h2 class="sidebar-title">Bán chạy</h2>
-                        <ul>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                        </ul>
-                    </div>
+               
                 </div>
                 
                 <div class="col-md-8">
@@ -217,7 +208,7 @@ include("./connect.php");
                                             <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
                                             <input type="submit" value="Apply Coupon" name="apply_coupon" class="button" id="Voucher">
                                         </div>
-                                        <input type="submit" value="Update Cart" name="update_cart" class="button">
+                                     
                                         <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
                                     </td>
                                 </tr>
@@ -237,7 +228,7 @@ include("./connect.php");
                                         while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
                                     <li class="product">
-                                        <a href="single-product.php?id=<?php echo $row['id']?>">
+                                        <a href="single-product.php?id=<?php echo $row['id']?> " data-item = '<?php echo json_encode($row)?>'>
                                             <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $row['image']?>">
                                             <h3>Gửi ý tưởng của bạn</h3>
                                             <span class="price"><span class="amount">$<?php echo number_format($row['price'])?></span></span>
@@ -260,7 +251,7 @@ include("./connect.php");
                                     <tbody>
                                         <tr class="cart-subtotal">
                                             <th>Tổng đơn hàng</th>
-                                            <td><span class="Subtotal-amount">£15.00</span></td>
+                                            <td><span class="Subtotal-amount">0</span></td>
                                         </tr>
 
                                         <tr class="shipping">
@@ -270,7 +261,7 @@ include("./connect.php");
 
                                         <tr class="order-total">
                                             <th>Tổng cộng</th>
-                                            <td><strong><span class="Order-total-amount">£15.00</span></strong> </td>
+                                            <td><strong><span class="Order-total-amount">0</span></strong> </td>
                                         </tr>
                                     </tbody>
                                 </table>

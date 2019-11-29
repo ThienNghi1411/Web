@@ -56,7 +56,7 @@ if (isset($_GET['id'])) {
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> Tài khoản của tôi</a></li>
+                          
                             <li><a href="#"><i class="fa fa-heart"></i> Danh sách</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> Giỏ hàng</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Kiểm tra</a></li>
@@ -185,16 +185,7 @@ if (isset($_GET['id'])) {
                         ?>
                     </div>
 
-                    <div class="single-sidebar">
-                        <h2 class="sidebar-title">Recent Posts</h2>
-                        <ul>
-                            <li><a href="">Sony Smart TV - 2015</a></li>
-                            <li><a href="">Sony Smart TV - 2015</a></li>
-                            <li><a href="">Sony Smart TV - 2015</a></li>
-                            <li><a href="">Sony Smart TV - 2015</a></li>
-                            <li><a href="">Sony Smart TV - 2015</a></li>
-                        </ul>
-                    </div>
+                    
                 </div>
                 <?php
                 $single = mysqli_query($conn, "SELECT * FROM sanpham WHERE id=$id");
