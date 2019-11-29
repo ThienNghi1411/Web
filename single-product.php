@@ -129,8 +129,8 @@ if (isset($_GET['id'])) {
                         <li><a href="cart.php">Giỏ hàng</a></li>
                         <li><a href="checkout.php">Kiểm tra</a></li>
                      
-                        <li><a href="#">Khác</a></li>
-                        <li><a href="#">Liên hệ</a></li>
+                     
+                        <li><a href="contact.php">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
