@@ -10,6 +10,10 @@ function ready()
     
         let a = JSON.parse (sessionStorage.getItem("total"));
         $("#place_order").click(function (e) {
+            if($("#billing_email").val()==""){
+                alert("Lỗi");
+                return;
+            }
             e.preventDefault()
             $.ajax({
                 method: "post",
@@ -19,8 +23,8 @@ function ready()
                     tong:a
                     
                 },
-                success:function() {
-                    alert("Thành công ");
+                success:function(data) {
+                    alert("thành công");
                 }
         
             })

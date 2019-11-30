@@ -90,11 +90,7 @@ include("./connect.php");
                     </div>
                 </div>
                 
-                <div class="col-sm-6">
-                    <div class="shopping-item">
-                        <a href="cart.php">Giỏ hàng <span class="cart-amunt">50 000 000 VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div> <!-- End site branding area -->
@@ -172,16 +168,7 @@ include("./connect.php");
                             ?>
                     </div>
                     
-                    <div class="single-sidebar">
-                        <h2 class="sidebar-title">Recent Posts</h2>
-                        <ul>
-                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
-                            <li><a href="single-product.php?id=1">Sony Smart TV - 2015</a></li>
-                        </ul>
-                    </div>
+                   
                 </div>
                 
                 <div class="col-md-8">
