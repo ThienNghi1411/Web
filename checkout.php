@@ -140,13 +140,7 @@ include("./connect.php");
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="single-sidebar">
-                        <h2 class="sidebar-title">Tìm kiếm sản phẩm</h2>
-                        <form action="">
-                            <input type="text" placeholder="Tìm kiếm...">
-                            <input type="submit" value="Tìm">
-                        </form>
-                    </div>
+                   
                     
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Sản phẩm</h2>
@@ -896,7 +890,7 @@ include("./connect.php");
 
                                             <tr class="cart-subtotal">
                                                 <th>Giá trị đơn hàng:</th>
-                                                <td><span class="Orderamount">£15.00</span>
+                                                <td><span class="Orderamount">0 VND</span>
                                                 </td>
                                             </tr>
 
@@ -912,7 +906,7 @@ include("./connect.php");
 
                                             <tr class="order-total">
                                                 <th>Đơn giá cuối</th>
-                                                <td><strong><span class="amount Totalamount">£15.00</span></strong> </td>
+                                                <td><strong><span class="amount Totalamount">0 VND</span></strong> </td>
                                             </tr>
 
                                         </tfoot>

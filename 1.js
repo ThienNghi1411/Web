@@ -98,7 +98,7 @@ function CheckCoupon(event)
         alert("Đơn hàng của bạn được giảm giá 500000vnd!")    
         check = true;
         UpdateCart();
-        UpdateCartHeader()
+        UpdateCartHeader();
     }
     else
     {
@@ -222,8 +222,17 @@ function UpdateCartHeader()
         x=x+parseInt(value.quantity)
         total = total+ (value.price * value.quantity)
     })
-    document.getElementsByClassName('product-count')[0].innerText = x
+    if(check == true)
+    {
+        document.getElementsByClassName('product-count')[0].innerText = x
+    document.getElementsByClassName('cart-amunt')[0].innerText = total-500000 + "  VNĐ"
+    }
+    else
+    {
+        document.getElementsByClassName('product-count')[0].innerText = x
     document.getElementsByClassName('cart-amunt')[0].innerText = total + "  VNĐ"
+    }
+    
 }
 
 

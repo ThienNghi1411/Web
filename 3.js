@@ -26,7 +26,7 @@ function addToCartClicked(event) {
    }else{
         jsondata = [];
    }
-    var button = event.target;
+    var button = event.target; 
     var data = button.getAttribute("data-item") ;// chuỗi json 
     let quantity_input = Number(document.querySelectorAll(".input-text")[0].value) ;
     
@@ -91,7 +91,7 @@ $(document).ready(function() {
                    
                    
                     if (list != "") {
-                        
+                       
                         $('#h2search').html("");
                         list.forEach(function(value) {
                             $('#h2search').append(`  

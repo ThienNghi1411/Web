@@ -14,7 +14,7 @@ function ready()
                 alert("Lỗi");
                 return;
             }
-            e.preventDefault()
+            e.preventDefault();
             $.ajax({
                 method: "post",
                 url:"mau.php",
@@ -23,7 +23,7 @@ function ready()
                     tong:a
                     
                 },
-                success:function(data) {
+                success:function() {
                     alert("thành công");
                 }
         
