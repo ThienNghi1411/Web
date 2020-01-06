@@ -180,13 +180,13 @@
                     <th style="width: 20%">
                        Tên sản phẩm
                     </th>
-                    <th style="width: 15%">
+                    <th style="width: 15%" class="text-center">
                        Tiền chưa giảm giá 
                     </th>
-                    <th style="width: 15%">
+                    <th style="width: 15%" class="text-center">
                         Tiền đã giảm giá
                     </th>
-                    <th style="width: 10%">
+                    <th style="width: 10%" class="text-center">
                         Hình ảnh 
                     </th>
                     <th style="width:24%">
@@ -204,19 +204,19 @@
                     <td style="width: 1%">
                     <?php echo $row["id"] ?>
                     </td>
-                    <td style="width: 20%">
+                    <td style="width: 20%" >
                         <?php echo $row["name"] ?>
                     </td>
-                    <td style="width: 15%">
+                    <td style="width: 10%" class="text-center">
                       <?php echo $row["price"] ?>
                     </td> 
-                    <td style="width: 15%">
+                    <td style="width: 10%"class="text-center">
                     <?php echo $row["price2"] ?>
                     </td>
-                    <td style="width: 10%">
+                    <td style="width: 10%" class="text-center">
                       <img alt="Avatar" class="table-avatar" src="./<?php echo $row["image"]?>">
                     </td> 
-                    <td class="project-state" style="
+                    <td class="project-state text-left" style="
                     max-width:300px;
                     white-space: nowrap;
                     overflow: hidden;
